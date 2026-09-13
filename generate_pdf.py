@@ -237,7 +237,7 @@ def main():
     cta_w = c.stringWidth(cta_text, "DejaVu-Bold", 28)
     c.drawString((WIDTH - cta_w) / 2, footer_y, cta_text)
 
-    cta_sub = "Visit https://pablo63leiva-alt.github.io/blue-collar-hustle-hub for apprenticeships, certifications, and step-by-step guides."
+    cta_sub = "Visit https://pablo63leiva-alt.github.io/tradelift for apprenticeships, certifications, and step-by-step guides."
     c.setFont("DejaVu", 16)
     c.setFillColor(TEXT_MUTED)
     cta_sub_w = c.stringWidth(cta_sub, "DejaVu", 16)
@@ -256,7 +256,7 @@ def main():
     c.drawString(btn_x + 15, btn_y + 11, btn_text)
 
     # Copyright
-    copyright_text = "© 2025 TradeLift. All rights reserved. | https://pablo63leiva-alt.github.io/blue-collar-hustle-hub"
+    copyright_text = "© 2025 TradeLift. All rights reserved. | https://pablo63leiva-alt.github.io/tradelift"
     c.setFont("DejaVu", 12)
     c.setFillColor(TEXT_MUTED)
     copyright_w = c.stringWidth(copyright_text, "DejaVu", 12)

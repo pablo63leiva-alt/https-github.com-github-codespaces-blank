@@ -10,7 +10,7 @@
 
 - **Name:** TradeLift (rebranded from "Blue Collar Hustle Hub")
 - **What:** Static multi-page marketing site selling skilled-trade careers to teenagers/young adults
-- **URL (LIVE):** https://pablo63leiva-alt.github.io/blue-collar-hustle-hub/ (GitHub Pages, auto-deploy on push to `main` via `.github/workflows/deploy.yml`)
+- **URL (LIVE):** https://pablo63leiva-alt.github.io/tradelift/ (GitHub Pages, auto-deploy on push to `main` via `.github/workflows/deploy.yml`; renamed from `blue-collar-hustle-hub` on 2026-09-13)
 - **DOMAIN STATUS (2026-09-11):** `tradelift.is-a.dev` was NEVER registered — the is-a.dev PR (#51656) was DENIED (root subdomains must be software-development related; site is a career/education site; also flagged AI-generated). Retrying risks a ban. Site is canonical on the github.io URL. Path to branded URL = buy a real domain (e.g. tradelift.dev) and re-add CNAME.
 - **Tech:** Vanilla HTML/CSS/JS. No framework, no build step.
 - **Theme:** Dark industrial, orange/yellow accents, mobile-first responsive.

@@ -1,7 +1,7 @@
 # TradeLift — Agent Instructions
 
 ## What This Is
-A static multi-page website promoting skilled-trade careers ("TradeLift"). Dark industrial theme (orange/yellow accents), mobile-first responsive. No framework, no build step — vanilla HTML/CSS/JS. Live at https://pablo63leiva-alt.github.io/blue-collar-hustle-hub/ (GitHub Pages, auto-deploy via `.github/workflows/deploy.yml`).
+A static multi-page website promoting skilled-trade careers ("TradeLift"). Dark industrial theme (orange/yellow accents), mobile-first responsive. No framework, no build step — vanilla HTML/CSS/JS. Live at https://pablo63leiva-alt.github.io/tradelift/ (GitHub Pages, auto-deploy via `.github/workflows/deploy.yml`). NOTE: repo + URL renamed from `blue-collar-hustle-hub` on 2026-09-13; old URL now 404s for the project site / redirects for repo files.
 
 **DOMAIN NOTE:** `tradelift.is-a.dev` was denied by is-a.dev (not software-dev related; flagged AI-generated) — it is NOT registered. Canonicals/sitemap/og all use the github.io base. Real-domain purchase is the only path to a branded URL (then re-add CNAME).
 
@@ -56,6 +56,6 @@ Teenagers / young adults considering trade careers (electrician, welder, plumber
 | Lang | Reserve / share images |
 
 ## Session Guidance
-- Live production repo: `https://pablo63leiva-alt.github.io/blue-collar-hustle-hub` → push to the `pages` remote (blue-collar-hustle-hub), **NOT** the fork (`origin` = dev copy).
+- Live production repo: `https://pablo63leiva-alt.github.io/tradelift` → push to the `pages` remote (tradelift), **NOT** the fork (`origin` = dev copy).
 - **DEPLOY NOTE:** Deploy unblocked 2026-09-11 via `gh auth login --web` (OAuth token, scopes `gist`/`read:org`/`repo`, in `~/.config/gh/hosts.yml`). **CRITICAL PUSH QUIRK (2026-09-11):** the codespace's own credential helper + env `GITHUB_TOKEN`/`GITHUB_CODESPACE_TOKEN` (metadata-only `ghu_` token) shadows the stored OAuth token (`gho_`, which has push rights) — a plain `git push` gets 403. **Use this exact pattern to push:** `env -u GITHUB_TOKEN -u GITHUB_CODESPACE_TOKEN git -c credential.helper= -c credential.https://github.com.helper='!gh auth git-credential' push <remote> main`. Also use `env -u GITHUB_TOKEN gh ...` for API calls. Editing `.github/workflows/**` later needs `workflow` scope.
 - Commit only when the user asks, or when the full-autonomy grant covers it (PM-approved, double-reviewed production deploys).

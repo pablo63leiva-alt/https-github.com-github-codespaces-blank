@@ -4,7 +4,7 @@
 
 ## Status: 🟢 PRODUCTION LIVE + EMAIL CAPTURE WIRED — remotes synced @ `4ab4c06`
 
-Live site: https://pablo63leiva-alt.github.io/blue-collar-hustle-hub/ (CI auto-deploys on push to `pages/main`).
+Live site: https://pablo63leiva-alt.github.io/tradelift/ (CI auto-deploys on push to `pages/main`). Repo/URL renamed from `blue-collar-hustle-hub` → `tradelift` 2026-09-13.
 **Email capture is now REAL (was placeholder):** Newsletter → Formspree `xqpkvyjg`, Quiz career-roadmap capture → Formspree `xzebljww`. Both live-tested `{"ok":true}`. Newsletter double-submit + false-success bugs fixed; quiz already clean (full 2-pass subagent review).
 
 ## Milestones
@@ -84,7 +84,7 @@ Live site: https://pablo63leiva-alt.github.io/blue-collar-hustle-hub/ (CI auto-d
 - PAT is a credential of the user; do not persist its value anywhere in this repo.
 
 ## Notes
-- Production pushes → `pages` remote (blue-collar-hustle-hub). Deploy is automatic on push to `main` there.
+- Production pushes → `pages` remote (tradelift). Deploy is automatic on push to `main` there.
 - The 12:19 PM EDT snapshot (2026-09-10) of project/memory/instructions lives in `docs/SESSION-MEMORY.md`.
 
 ## Optional / Future Work
