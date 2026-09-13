@@ -528,7 +528,7 @@
     if (!tradeEl) return;
 
     var tradeName = tradeEl.getAttribute('data-trade') || tradeEl.textContent.replace('You\u2019re built for ', '').replace('!', '');
-    var text = 'I\u2019m built for ' + tradeName + '! Take the TradeLift quiz: https://pablo63leiva-alt.github.io/blue-collar-hustle-hub/quiz.html';
+    var text = 'I\u2019m built for ' + tradeName + '! Take the TradeLift quiz: https://pablo63leiva-alt.github.io/tradelift/quiz.html';
 
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(text).then(function () {

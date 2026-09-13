@@ -58,7 +58,7 @@
           '<span style="font-size:1.6rem;">⚒️</span>' +
           '<span style="font-size:1.4rem;font-weight:800;color:#ffffff;">TradeLift</span>' +
         '</div>' +
-        '<div style="font-size:0.9rem;color:#8a8a8a;">Take the quiz → https://pablo63leiva-alt.github.io/blue-collar-hustle-hub/quiz.html</div>' +
+        '<div style="font-size:0.9rem;color:#8a8a8a;">Take the quiz → https://pablo63leiva-alt.github.io/tradelift/quiz.html</div>' +
       '</div>' +
 
       '</div>';

@@ -1,8 +1,8 @@
 {
   "name": "TradeLift",
   "short_name": "TradeLift",
-  "start_url": "/blue-collar-hustle-hub/",
-  "scope": "/blue-collar-hustle-hub/",
+  "start_url": "/tradelift/",
+  "scope": "/tradelift/",
   "display": "standalone",
   "background_color": "#0a0a0a",
   "theme_color": "#ff6b00",
