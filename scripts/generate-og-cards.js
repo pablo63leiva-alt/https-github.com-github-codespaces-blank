@@ -77,7 +77,7 @@ function buildCardHTML(trade) {
           '<span class="tl-brand-icon">⚒️</span>' +
           '<span class="tl-brand-name">TradeLift</span>' +
         '</div>' +
-        '<div class="tl-cta">Take the quiz → https://pablo63leiva-alt.github.io/tradelift/quiz.html</div>' +
+        '<div class="tl-cta">Take the quiz → https://tradelift.surge.sh/quiz.html</div>' +
       '</div>' +
     '</div>' +
     '</body></html>'

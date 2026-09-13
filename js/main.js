@@ -56,7 +56,7 @@
      Service Worker Registration
      ============================================ */
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('https://pablo63leiva-alt.github.io/tradelift/sw.js').catch(function () {});
+    navigator.serviceWorker.register('https://tradelift.surge.sh/sw.js').catch(function () {});
   }
 
   /* ============================================
@@ -143,7 +143,7 @@
         <h2 id="exit-modal-title" class="exit-modal-title">Don't Leave Empty-Handed!</h2>
         <p class="exit-modal-subtitle">Grab our free PDF: <strong>5 Trades Paying $60K+ with No Degree</strong></p>
         <form class="exit-modal-form" action="#" method="POST">
-          <input type="hidden" name="_next" value="https://pablo63leiva-alt.github.io/tradelift/assets/trade-lift-5-trades.pdf">
+          <input type="hidden" name="_next" value="https://tradelift.surge.sh/assets/careers.guide">
           <div class="exit-modal-form-group">
             <label for="exit-modal-email" class="visually-hidden">Email address</label>
             <input
@@ -167,7 +167,7 @@
           <div class="exit-modal-success-icon" aria-hidden="true">✅</div>
           <h3 class="exit-modal-success-title">Thanks! Check your email.</h3>
           <p class="exit-modal-success-text">Your free PDF is on its way. You can also download it directly:</p>
-          <a href="https://pablo63leiva-alt.github.io/tradelift/assets/trade-lift-5-trades.pdf" class="btn btn-primary exit-modal-download" download>Download PDF Now</a>
+          <a href="https://tradelift.surge.sh/assets/careers.guide" class="btn btn-primary exit-modal-download" download="trade-lift-5-trades.pdf">Download PDF Now</a>
         </div>
       </div>
     `;

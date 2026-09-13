@@ -1,13 +1,20 @@
 # TradeLift — Progress Tracker
 
-**Last updated:** Sunday, September 13, 2026 (7:20 PM EDT) — FORMSPREE CAPTURE LIVE, email capture fully working
+**Last updated:** Sunday, September 13, 2026 (night) — HOST MOVED TO SURGE, github.io REMOVED
 
-## Status: 🟢 PRODUCTION LIVE + EMAIL CAPTURE WIRED — remotes synced @ `4ab4c06`
+## Status: 🟢 PRODUCTION LIVE @ https://tradelift.surge.sh — github.io fully removed (404), capture live
 
-Live site: https://pablo63leiva-alt.github.io/tradelift/ (CI auto-deploys on push to `pages/main`). Repo/URL renamed from `blue-collar-hustle-hub` → `tradelift` 2026-09-13.
+Live site: https://tradelift.surge.sh/ (Surge.sh; deploy = `bash scripts/deploy-surge.sh`). GitHub Pages disabled 2026-09-13; the `pages` remote repo is an archived code mirror only — never push there (dead workflow would re-enable Pages; editing workflows needs `workflow` scope). Dev copy: `origin`.
 **Email capture is now REAL (was placeholder):** Newsletter → Formspree `xqpkvyjg`, Quiz career-roadmap capture → Formspree `xzebljww`. Both live-tested `{"ok":true}`. Newsletter double-submit + false-success bugs fixed; quiz already clean (full 2-pass subagent review).
 
 ## Milestones
+
+### Done & Shipped — HOST MOVE TO SURGE (2026-09-13, committed on `origin`)
+- [x] Repo rename → `tradelift` gave short github.io URL, then **full move OFF GitHub Pages**: live site = https://tradelift.surge.sh (no more github.io — confirmed 404)
+- [x] All 200+ absolute URLs → surge base (canonical/og/twitter/json-ld/sitemap/sw/manifest/robots); God-style path-safety verified by dual QA (Rogers clean, Romanoff live-verified)
+- [x] Surge quirks solved: `.pdf` blocked → lead-magnet served as `assets/careers.guide` (octet-stream download, `download="trade-lift-5-trades.pdf"`); PWA manifest rooted at `/`; `scripts/deploy-surge.sh` reproducible deploy
+- [x] CI converted to health checks (no Pages deploy); github.io Pages disabled; `pages` remote archived
+- [x] eu.org: `tradelift.eu.org` app prepped (contact PL1771-FREE validated link saved, no captcha) — approval ~2-6 wks, optional long-term custom domain
 
 ### Done & Shipped — FORMSPREE WIRE (committed `4ab4c06`, deployed, remotes synced)
 - [x] Live Formspree IDs in js/main.js (Newsletter `xqpkvyjg`) + js/quiz.js (Quiz `xzebljww`) — replaces `f/YOURID` placeholder
