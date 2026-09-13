@@ -222,7 +222,7 @@
   var locked = false;
   var emailSubmitted = false;
   var QUIZ_EMAIL_CONFIG = {
-    formspreeEndpoint: 'https://formspree.io/f/YOURID'
+    formspreeEndpoint: 'https://formspree.io/f/xzebljww'
   };
   var questionArea;
   var resultsArea;

@@ -63,7 +63,7 @@
      Newsletter Form (Formspree / mailto fallback)
      ============================================ */
   var NEWSLETTER_CONFIG = {
-    formspreeEndpoint: 'https://formspree.io/f/YOURID'
+    formspreeEndpoint: 'https://formspree.io/f/xqpkvyjg'
   };
 
   var newsletterForm = document.querySelector('.newsletter-form');
@@ -83,6 +83,7 @@
 
       var button = newsletterForm.querySelector('button[type="submit"]');
       if (!button) return;
+      if (button.disabled) return;
       var originalText = button.textContent;
 
       if (NEWSLETTER_CONFIG.formspreeEndpoint.indexOf('YOURID') !== -1) {
@@ -98,6 +99,12 @@
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: email })
       })
+        .then(function (res) {
+          if (!res.ok) {
+            throw new Error('Formspree ' + res.status);
+          }
+          return res;
+        })
         .then(function () {
           newsletterForm.reset();
           button.textContent = "You're on the list! Check your inbox to confirm.";
@@ -224,6 +231,7 @@
 
     var submitBtn = form.querySelector('.exit-modal-submit');
     if (!submitBtn) return;
+    if (submitBtn.disabled) return;
     var originalText = submitBtn.textContent;
 
     if (NEWSLETTER_CONFIG.formspreeEndpoint.indexOf('YOURID') !== -1) {
@@ -239,6 +247,12 @@
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email: email })
     })
+      .then(function (res) {
+        if (!res.ok) {
+          throw new Error('Formspree ' + res.status);
+        }
+        return res;
+      })
       .then(function () {
         form.classList.add('hidden');
         var success = form.parentElement.querySelector('.exit-modal-success');
