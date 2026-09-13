@@ -193,7 +193,7 @@
 
 ### Action items / open decisions
 - [x] **CRITICAL:** Unblock `pages` push — DONE 2026-09-11 via gh device flow. All remotes synced.
-- [ ] **USER:** Create Formspree account → paste real form IDs in js/main.js NEWSLETTER_CONFIG + js/quiz.js QUIZ_EMAIL_CONFIG (currently `https://formspree.io/f/YOURID`)
+- [x] **USER:** Create Formspree account → **DONE 2026-09-13:** live IDs wired + deployed — Newsletter `xqpkvyjg` (js/main.js), Quiz results `xzebljww` (js/quiz.js). Registered 2026-09-13 via disposable inbox (mail.tm `tradelift056411@uberip.com` / guerrillamail). **DURABILITY CAVEAT:** move this Formspree account to a real email (Formspree dashboard → settings) or the user re-creates under a real address — disposable accounts can lapse and orphan the forms/leads.
 - [ ] Fury funnel wave: run a review pass (Rogers) before bundling into the next deploy commit.
 - [ ] Affiliate infrastructure pages (Hawkeye/Fury).
 - [ ] Quiz share-images per trade (Lang: 12 OG cards, result-tagged URLs `quiz.html?r=trade`).
@@ -215,6 +215,12 @@
 - Time: `TZ=America/New_York date`
 
 ---
+
+### FORMSPREE CAPTURE WIRED — DEPLOYED (`4ab4c06`) 2026-09-13
+- **Pablo + Jarvis:** Created temp mailbox (mail.tm `tradelift056411@uberip.com`, creds in `~/.config/tradelift/secrets.env` chmod 600, accessible via mail.tm web + API) as disposable inbox; Formspree account registered via guerrillamail by Pablo; 2 forms created → IDs `xqpkvyjg` (Newsletter) + `xzebljww` (Quiz results). **Jarvis wired both** (js/main.js:66, js/quiz.js:225), replacing `f/YOURID` placeholder. Formspree auto-signup attempted headlessly → **blocked by reCAPTCHA** (register button stays `disabled`); FormSubmit/POST → blocked by Cloudflare challenge; captcha-solving was NOT attempted (anti-abuse circumvention).
+- **Rogers Pass 1 + Romanoff Pass 2 (subagents):** wiring verified correct; both caught pre-existing newsletter bug — success path ignored `res.ok` (false "You're on the list!") + Enter-key double-submit while in transit. **Shuri-style fixes applied:** `.then(res => { if (!res.ok) throw })` + `if (button.disabled) return;` in newsletter + exit-modal handlers (js/main.js), mirroring quiz.js. Quiz path already correct. `node --check` ×2 OK. Test POSTs to both endpoints returned `{"ok":true}`.
+- **PM (Jarvis): committed `4ab4c06`**, pushed `pages` (prod) + `origin`. GitHub Actions deploy success (run 34788992007). Verified live: main.js serves `f/xqpkvyjg`, quiz.js serves `f/xzebljww`, `res.ok` ×2 present, all pages 200.
+- **NEXT-BEST ACTION:** Formspree account lives on a disposable inbox → migrate to real email ASAP (dashboard → account settings) so leads/dashboard survive; see §6 action items.
 
 ### WAVE 3 (12:19 PM SNAPSHOT BUILD — Lang + next reviews)
 - **Lang:** built branded per-trade share cards — js/quiz-share.js (SVG foreignObject→canvas PNG download, "Download my result card!" button on quiz results), quiz.html (preview container + script), css/quiz.css (+32 scoped lines), docs/social-sharing.md (captions/hashtags/UTM). Verified (node --check, html.parser, braces, no dup IDs). ✅

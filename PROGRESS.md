@@ -1,13 +1,19 @@
 # TradeLift — Progress Tracker
 
-**Last updated:** Friday, September 11, 2026 (2:30 PM EDT) — WAVE 6 SHIPPED, hard deadline Sun Sep 13
+**Last updated:** Sunday, September 13, 2026 (7:20 PM EDT) — FORMSPREE CAPTURE LIVE, email capture fully working
 
-## Status: 🟢 PRODUCTION LIVE + WAVE 6 DEPLOYED — all remotes synced @ `ab3325f`
+## Status: 🟢 PRODUCTION LIVE + EMAIL CAPTURE WIRED — remotes synced @ `4ab4c06`
 
 Live site: https://pablo63leiva-alt.github.io/blue-collar-hustle-hub/ (CI auto-deploys on push to `pages/main`).
-Verified 200 OK: 10 blog posts incl. HVAC/plumber salary + electrician tools affiliate guide. Sitemap 17 URLs, idempotent. Auth deploy fix documented (see AGENTS.md).
+**Email capture is now REAL (was placeholder):** Newsletter → Formspree `xqpkvyjg`, Quiz career-roadmap capture → Formspree `xzebljww`. Both live-tested `{"ok":true}`. Newsletter double-submit + false-success bugs fixed; quiz already clean (full 2-pass subagent review).
 
 ## Milestones
+
+### Done & Shipped — FORMSPREE WIRE (committed `4ab4c06`, deployed, remotes synced)
+- [x] Live Formspree IDs in js/main.js (Newsletter `xqpkvyjg`) + js/quiz.js (Quiz `xzebljww`) — replaces `f/YOURID` placeholder
+- [x] Rogers Pass 1 + Romanoff Pass 2: wiring verified; both caught pre-existing newsletter bugs → fixed (res.ok guard + Enter-key double-submit, ×2 handlers)
+- [x] Deploy success (Actions run 34788992007); verified live JS serves real IDs, all pages 200
+- [ ] Formspree account is on a disposable inbox → migrate to real email ASAP (keeps leads + dashboard access)
 
 ### Done & Shipped — WAVE 6 (committed `ab3325f`, deployed to production, remotes synced)
 - [x] `blog/apprentice-wages-by-year.html` — cross-trade year-by-year table (electrician, plumber, HVAC, welder, carpenter, elevator installer), targets "apprentice wages by year"
