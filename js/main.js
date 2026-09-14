@@ -141,7 +141,12 @@
         <button class="exit-modal-close" aria-label="Close modal">&times;</button>
         <div class="exit-modal-icon" aria-hidden="true">🎁</div>
         <h2 id="exit-modal-title" class="exit-modal-title">Don't Leave Empty-Handed!</h2>
-        <p class="exit-modal-subtitle">Grab our free PDF: <strong>5 Trades Paying $60K+ with No Degree</strong></p>
+        <p class="exit-modal-subtitle">Get your <strong>Free Trade Career Fit Guide</strong> — instant PDF download:</p>
+        <ul style="text-align:left;margin:0 auto 20px;padding-left:20px;max-width:320px;color:var(--text-body);font-size:0.9rem;line-height:1.8;list-style:disc">
+          <li>12 trade profiles with salary ranges</li>
+          <li>Pros &amp; cons for every trade</li>
+          <li>90-day career roadmap to get started</li>
+        </ul>
         <form class="exit-modal-form" action="#" method="POST">
           <input type="hidden" name="_next" value="https://tradelift.surge.sh/assets/careers.guide">
           <div class="exit-modal-form-group">
@@ -166,8 +171,9 @@
         <div class="exit-modal-success hidden" aria-live="polite">
           <div class="exit-modal-success-icon" aria-hidden="true">✅</div>
           <h3 class="exit-modal-success-title">Thanks! Check your email.</h3>
-          <p class="exit-modal-success-text">Your free PDF is on its way. You can also download it directly:</p>
-          <a href="https://tradelift.surge.sh/assets/careers.guide" class="btn btn-primary exit-modal-download" download="trade-lift-5-trades.pdf">Download PDF Now</a>
+          <p class="exit-modal-success-text">Your free Trade Career Fit Guide is on its way. You can also download it directly:</p>
+          <a href="https://tradelift.surge.sh/assets/careers.guide" class="btn btn-primary exit-modal-download" download="TradeLift-Career-Fit-Guide.pdf">Download Career Fit Guide</a>
+          <p class="exit-modal-success-text" style="margin-top:12px;font-size:0.85rem;color:#8a8a8a">Includes 12 trade profiles, salary ranges, pros &amp; cons, and a 90-day action plan.</p>
         </div>
       </div>
     `;

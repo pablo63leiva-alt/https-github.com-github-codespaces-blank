@@ -31,7 +31,7 @@ Teenagers / young adults considering trade careers (electrician, welder, plumber
 - HTML well-formedness: `python3` with `html.parser` (pattern used previously)
 - JS syntax: `node --check js/main.js js/quiz.js`
 - CSS brace balance: count `{` vs `}`
-- Sitemap: `node scripts/generate-sitemap.js` (run twice → identical, 17 URLs)
+- Sitemap: `node scripts/generate-sitemap.js` (run twice → identical, 22 URLs)
 
 ## WORKFLOW RULES (ALWAYS FOLLOW)
 1. **Always use subagents (squad) for reviews** — never review only with my own tools.

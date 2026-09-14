@@ -1,6 +1,6 @@
 # TradeLift — Progress Tracker
 
-**Last updated:** Sunday, September 13, 2026 (night) — WAVE 1 (revenue sprint) LIVE: 14 posts, 12 roadmaps, merch kit, $50K plan
+**Last updated:** Monday, September 14, 2026 (12:18 PM EDT) — SQUAD SESSION: career guide PDF + 2 affiliate posts wired, 3 more posts on disk, SEO audit clean
 
 ## Status: 🟢 PRODUCTION LIVE @ https://tradelift.surge.sh — revenue assets deployed
 
@@ -8,6 +8,29 @@ Live site: https://tradelift.surge.sh/ (Surge.sh; deploy = `bash scripts/deploy-
 **Email capture is now REAL (was placeholder):** Newsletter → Formspree `xqpkvyjg`, Quiz career-roadmap capture → Formspree `xzebljww`. Both live-tested `{"ok":true}`. Newsletter double-submit + false-success bugs fixed; quiz already clean (full 2-pass subagent review).
 
 ## Milestones
+
+### Done & Shipped — SESSION 2026-09-14: CAREER GUIDE PDF + 2 AFFILIATE POSTS + SOCIAL/DOCS (squad)
+- [x] **Stark:** `scripts/generate_career_guide.py` → `assets/careers.guide` — 15-page branded Trade Career Fit Guide (12 trades + 90-day plan + resources), **salary bands fixed to match quiz.js/trades.html canonicals** (was spec-derived) + verified `Salary bands verified: OK`
+- [x] **Career guide wired into funnel:** `quiz.html` post-email "Download your FREE Career Fit Guide" button; `js/quiz.js` `showCareerGuideDownload()` after email capture; `js/main.js` exit-modal copy now pitches the guide
+- [x] **Fury:** `blog/best-plumbing-tools-for-apprentices.html` — 20 Amazon `tag=tradelift-20` links, FTC disclosure, "Our Top Pick" badges, wired into blog.html grid + BlogPosting JSON-LD
+- [x] **Wiring fix:** `blog/best-welding-equipment-for-beginners.html` added to blog.html grid + BlogPosting array (was unwired)
+- [x] **Banner:** `docs/social-media-strategy.md` — 90-day calendar, 6 content pillars, hashtags, KPIs (5300 followers, ≥5% eng, 12% email capture)
+- [x] **Vision:** technical SEO audit (see section above) — 0 remaining issues
+- [ ] **GAP — 3 Hawkeye posts on disk but NOT wired into blog.html:** `how-to-become-a-plumber-step-by-step`, `highest-paying-trade-careers-2026`, `best-trade-schools-in-america` → need blog cards + BlogPosting JSON-LD + sitemap regen
+- [ ] **GAP — Shuri CRO tasks pending** (exit-modal upgrade, benefit microcopy, trust signals) — cancelled by capacity
+- [ ] **GAP — `docs/outreach-strategy.md` NOT persisted** (agent claimed created; file absent) → recreate
+- [ ] **GAP — NOT deployed:** this session's work is on `origin` only; surge deploy pending (`bash scripts/deploy-surge.sh`)
+- [ ] **GAP — Formspree still on disposable inbox** → migrate to real email
+
+### Done & Shipped — TECHNICAL SEO AUDIT & FIXES (2026-09-14, Vision)
+- [x] Sitemap: regenerated idempotent ×2 → 22 URLs (7 main + 15 posts incl. new `best-welding-equipment-for-beginners.html`); all files exist, lastmod 2026-09-13/14, no 404s; robots.txt sitemap ref OK
+- [x] **Fixed:** `trades.html` — added `id` anchor on all 12 trade-card `<article>`s + replaced 12 `href="#"` "Learn More" CTAs → `href="#<trade>"`. Resolves pre-existing logged issue: widget/quiz.html + blog CTAs link `trades.html#<id>`, which previously had no matching anchors
+- [x] **Fixed:** meta descriptions >160 chars on `apprentice-wages-by-year`, `hvac-apprenticeship-requirements`, `best-welding-equipment-for-beginners`
+- [x] **Fixed:** `badge.html` missing OG/Twitter (added full set + robots index); `widget/quiz.html` missing OG/Twitter (added, og:url → canonical quiz.html); `widget/demo.html` missing canonical → added canonical + `noindex` (dev demo)
+- [x] **Fixed:** mobile tap targets — `.filter-btn` (8/20→12/22px), `.social-link` (40→44px), `.nav-toggle` hit area (8→10/12px)
+- [x] Verified: all 25 HTML well-formed; 0 dup meta/clean JSON-LD (Article/FAQPage parity 5-6 Qs each); FAQ schema ↔ visible `<details>` match on all 15 posts; BlogPosting JSON-LD + blog.html cards consistent (new post needs card + BlogPosting entry — content task)
+- [x] Noted (left intact by design): footer social `href="#"` placeholders (no real profile URLs); og-*.png ~370KB social-card images (not page-rendered; page images all <5KB)
+- [x] JS ×3 `node --check` OK; CSS braces balanced; no horizontal-scroll risk (body `overflow-x:hidden`, fluid max-widths)
 
 ### Done & Shipped — WAVE 1 REVENUE SPRINT (2026-09-13, deployed, on `origin`)
 - [x] 2 new SEO posts → 14 total: `blog/carpenter-apprentice-salary.html` ("carpenter apprentice salary") + `blog/how-to-become-a-welder.html` ("how to become a welder"); blog.html 14 cards + 14 BlogPosting; sitemap now 21 URLs, executable glob

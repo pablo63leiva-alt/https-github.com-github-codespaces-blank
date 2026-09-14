@@ -493,6 +493,7 @@
         var successTrade = document.getElementById('quiz-email-success-trade');
         if (successTrade) successTrade.textContent = tradeName;
         showRoadmapDownload(tradeName);
+        showCareerGuideDownload();
         var successEl = document.getElementById('quiz-email-success');
         if (successEl) successEl.hidden = false;
         submitBtn.textContent = originalText;
@@ -517,6 +518,8 @@
     }
     var success = document.getElementById('quiz-email-success');
     if (success) success.hidden = true;
+    var careerGuideCta = document.getElementById('quiz-email-career-guide-cta');
+    if (careerGuideCta) careerGuideCta.hidden = true;
     var roadmapCta = document.getElementById('quiz-email-roadmap-cta');
     if (roadmapCta) roadmapCta.hidden = true;
     var roadmapLink = document.getElementById('quiz-email-roadmap-link');
@@ -531,6 +534,16 @@
       submitBtn.textContent = 'Send Me the Roadmap';
       submitBtn.disabled = false;
     }
+  }
+
+  function showCareerGuideDownload() {
+    var el = document.getElementById('quiz-email-career-guide-cta');
+    if (!el) return;
+    fetch('assets/careers.guide', { method: 'HEAD' })
+      .then(function (res) {
+        if (res.ok) el.hidden = false;
+      })
+      .catch(function () {});
   }
 
   function getTradeName() {

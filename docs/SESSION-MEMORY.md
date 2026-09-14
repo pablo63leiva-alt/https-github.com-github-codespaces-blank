@@ -239,3 +239,40 @@
 - **Rogers + Romanoff:** PASS both — zero blocking. Non-blocking: widget/quiz.html result-CTAs reference trades.html#id anchors that don't exist (pre-existing); roadmap .pdf sources ship as inert bytes (~600KB).
 - **Deployed + live-verified:** 14 posts 200, roadmaps 200, careers.guide 200, sitemap 21 locs, canonical surge, showRoadmapDownload live.
 - **Amazon:** Associate ID **tradelift-20** confirmed by Pablo; 94 affiliate links verified using it. Pending: real-identity signing (tax/payment interview).
+
+---
+
+## 9. SESSION — 2026-09-14 (11:17 AM–12:18 PM EDT)
+
+**Pablo directive:** resume working, deploy full squad, focus on one thing and master it → TRADE CAREERS AFFILIATE + DIGITAL PRODUCT FUNNEL. $50K by Dec 22.
+
+### Work completed this session:
+
+- **Vision (SEO audit):** Full technical audit across 25 HTML files → fixed 12 broken `href="#"` Learn More CTAs in trades.html (added missing anchor IDs for all 12 trades); fixed 3 meta descriptions >160 chars; added full OG/Twitter/canonical + robots to badge.html, widget/quiz.html (og:url → canonical quiz.html); added canonical + robots:noindex to widget/demo.html; bumped mobile tap targets (.filter-btn, .social-link, .nav-toggle) to ≥44px. Sitemap re-verified 22 URLs idempotent. Doc drift: AGENTS.md sitemap note updated. **0 remaining issues.** ✅
+
+- **Banner (social media strategy):** Created `docs/social-media-strategy.md` — 90-day content calendar (TikTok primary, IG/X/YT secondary), 6 content pillars, hashtags, engagement templates, collab/UGC plans, KPIs (5300 followers target, ≥5% engagement, 12% email capture from traffic). ✅
+
+- **Stark (career guide PDF):** Created `scripts/generate_career_guide.py` → `assets/careers.guide` (15-page branded PDF, 81.7KB, 12 trades + 90-day plan + resources, salary bands = quiz.js/trades.html canonical values). Wired into `quiz.html` (post-email "Download your FREE Career Fit Guide" button) + `js/quiz.js` (showCareerGuideDownload after email capture) + `js/main.js` (exit modal copy now pitches the guide). ✅
+
+- **Fury (affiliate + wiring):** Created `blog/best-plumbing-tools-for-apprentices.html` (20 Amazon `tag=tradelift-20` links, FTC disclosure, wired into blog.html grid + BlogPosting JSON-LD). Also wired pre-existing `blog/best-welding-equipment-for-beginners.html` into blog.html. Sitemap now 26 URLs. ✅
+
+- **Hawkeye (content — PARTIAL):** 3 new SEO posts created on disk but **NOT wired into blog.html** (cards + BlogPosting missing):
+  - `blog/how-to-become-a-plumber-step-by-step.html`
+  - `blog/highest-paying-trade-careers-2026.html`
+  - `blog/best-trade-schools-in-america.html`
+  - **ACTION:** Wire these 3 into blog.html + regenerate sitemap.
+
+- **Shuri (CRO):** Tasks attempted but cancelled due to capacity. **ACTION:** exit-modal upgrade, benefit-led microcopy, trust signals still pending.
+
+- **Coulson (outreach):** `docs/outreach-strategy.md` claimed created but **NOT actually persisted** to disk. **ACTION:** recreate.
+
+- **Salary band fix:** Career guide had wrong bands (used spec values, not site). Fixed `generate_career_guide.py` to match quiz.js/trades.html canonicals and regenerated. Verified `Salary bands verified: OK`.
+
+### Known gaps at session save:
+1. 3 Hawkeye posts unwired in blog.html (cards + BlogPosting JSON-LD needed)
+2. Sitemap needs regeneration (should be ~29 URLs after wiring all posts)
+3. Shuri CRO tasks not completed
+4. docs/outreach-strategy.md needs recreation
+5. Deployment to surge.sh not yet done (bash scripts/deploy-surge.sh)
+6. PROGRESS.md needs full update
+7. Formspree account still on disposable inbox — migrate
