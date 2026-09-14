@@ -124,6 +124,14 @@
     }
   ];
 
+  function tradeSlug(name) {
+    return String(name || '').toLowerCase().replace(/\s+/g, '-');
+  }
+
+  var TRADE_SLUGS = TRADES.map(function (t) {
+    return tradeSlug(t.name);
+  });
+
   var QUESTIONS = [
     {
       q: 'When you picture your ideal workday, what does it look like?',
@@ -484,6 +492,7 @@
         if (form) form.hidden = true;
         var successTrade = document.getElementById('quiz-email-success-trade');
         if (successTrade) successTrade.textContent = tradeName;
+        showRoadmapDownload(tradeName);
         var successEl = document.getElementById('quiz-email-success');
         if (successEl) successEl.hidden = false;
         submitBtn.textContent = originalText;
@@ -508,6 +517,13 @@
     }
     var success = document.getElementById('quiz-email-success');
     if (success) success.hidden = true;
+    var roadmapCta = document.getElementById('quiz-email-roadmap-cta');
+    if (roadmapCta) roadmapCta.hidden = true;
+    var roadmapLink = document.getElementById('quiz-email-roadmap-link');
+    if (roadmapLink) {
+      roadmapLink.href = '#';
+      roadmapLink.removeAttribute('download');
+    }
     var error = document.getElementById('quiz-email-error');
     if (error) error.textContent = '';
     var submitBtn = document.getElementById('quiz-email-submit');
@@ -521,6 +537,24 @@
     var tradeEl = document.getElementById('quiz-results-trade');
     if (!tradeEl) return '';
     return tradeEl.getAttribute('data-trade') || tradeEl.textContent.replace('You\u2019re built for ', '').replace('!', '');
+  }
+
+  function showRoadmapDownload(tradeName) {
+    var cta = document.getElementById('quiz-email-roadmap-cta');
+    var link = document.getElementById('quiz-email-roadmap-link');
+    if (!cta || !link) return;
+    var slug = tradeSlug(tradeName);
+    if (TRADE_SLUGS.indexOf(slug) === -1) return;
+    fetch('assets/roadmaps/' + slug + '-roadmap', { method: 'HEAD' })
+      .then(function (res) {
+        if (res.ok) {
+          link.href = 'assets/roadmaps/' + slug + '-roadmap';
+          link.setAttribute('download', slug + '-roadmap.pdf');
+          link.textContent = 'Download your free ' + tradeName + ' Roadmap';
+          cta.hidden = false;
+        }
+      })
+      .catch(function () {});
   }
 
   function share() {

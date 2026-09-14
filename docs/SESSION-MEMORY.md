@@ -233,3 +233,9 @@
 - Jarvis = the PM AI persona (omniroute/auto via OmniRoute localhost:20128). Subagents: `general` type, fresh context per launch unless resumed with task_id.
 - Network discipline: subagents self-review + propose growth ideas; rounds reviewed by Rogers/Romanoff before deploy.
 - Update this file at session end — it is the memory of record.
+### WAVE 1 — REVENUE SPRINT DEPLOYED (2026-09-13, host = tradelift.surge.sh)
+- **Hawkeye:** +2 SEO posts (carpenter-apprentice-salary, how-to-become-a-welder) → 14 posts; blog.html 14 cards + 14 BlogPosting. **Stark:** 12 per-trade roadmap PDFs + scripts/generate-roadmaps.py (site-consistent salary bands, idempotent). **Lang:** 12 merch designs (3000px PNG/SVG) + launch-kit + Printful/Etsy runbook. **Fury:** docs/REVENUE-OPS.md ($50K-by-Dec-22 plan, monthly table, ONLY-PABLO list, 3 scenarios).
+- **Vision:** sitemap generator → glob (21 URLs idempotent); quiz email-capture success now offers matching roadmap download (`assets/roadmaps/<slug>-roadmap` extensionless — surge 404s .pdf, same trick as careers.guide); deploy-surge.sh copies 12 PDFs → extensionless siblings.
+- **Rogers + Romanoff:** PASS both — zero blocking. Non-blocking: widget/quiz.html result-CTAs reference trades.html#id anchors that don't exist (pre-existing); roadmap .pdf sources ship as inert bytes (~600KB).
+- **Deployed + live-verified:** 14 posts 200, roadmaps 200, careers.guide 200, sitemap 21 locs, canonical surge, showRoadmapDownload live.
+- **Amazon:** Associate ID **tradelift-20** confirmed by Pablo; 94 affiliate links verified using it. Pending: real-identity signing (tax/payment interview).

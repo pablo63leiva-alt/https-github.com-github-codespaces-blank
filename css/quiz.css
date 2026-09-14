@@ -339,6 +339,15 @@
   line-height: 1.5;
 }
 
+.quiz-email-roadmap-cta {
+  margin: 16px 0 0;
+}
+
+.quiz-email-roadmap-cta .btn {
+  width: 100%;
+  text-decoration: none;
+}
+
 /* --- Responsive: Tablet+ --- */
 @media (min-width: 600px) {
   .quiz-hero {

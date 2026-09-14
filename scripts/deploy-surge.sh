@@ -15,6 +15,14 @@ trap 'rm -rf "$BUILD_DIR"' EXIT
 rsync -a --delete --exclude '.git' "$REPO_DIR/" "$BUILD_DIR/"
 cp "$REPO_DIR/assets/trade-lift-5-trades.pdf" "$BUILD_DIR/assets/careers.guide"
 
+# Surge serves .pdf as 404, so every roadmap PDF is also deployed under its
+# extensionless name (served as application/octet-stream, same pattern as careers.guide).
+for pdf in "$REPO_DIR"/assets/roadmaps/*-roadmap.pdf; do
+  if [ -f "$pdf" ]; then
+    cp "$pdf" "$BUILD_DIR/assets/roadmaps/$(basename "$pdf" .pdf)"
+  fi
+done
+
 node "$REPO_DIR/scripts/generate-sitemap.js"
 
 # Feed a newline so surge doesn't wait on TTY prompts (account already authenticated).

@@ -1,13 +1,23 @@
 # TradeLift — Progress Tracker
 
-**Last updated:** Sunday, September 13, 2026 (night) — HOST MOVED TO SURGE, github.io REMOVED
+**Last updated:** Sunday, September 13, 2026 (night) — WAVE 1 (revenue sprint) LIVE: 14 posts, 12 roadmaps, merch kit, $50K plan
 
-## Status: 🟢 PRODUCTION LIVE @ https://tradelift.surge.sh — github.io fully removed (404), capture live
+## Status: 🟢 PRODUCTION LIVE @ https://tradelift.surge.sh — revenue assets deployed
 
 Live site: https://tradelift.surge.sh/ (Surge.sh; deploy = `bash scripts/deploy-surge.sh`). GitHub Pages disabled 2026-09-13; the `pages` remote repo is an archived code mirror only — never push there (dead workflow would re-enable Pages; editing workflows needs `workflow` scope). Dev copy: `origin`.
 **Email capture is now REAL (was placeholder):** Newsletter → Formspree `xqpkvyjg`, Quiz career-roadmap capture → Formspree `xzebljww`. Both live-tested `{"ok":true}`. Newsletter double-submit + false-success bugs fixed; quiz already clean (full 2-pass subagent review).
 
 ## Milestones
+
+### Done & Shipped — WAVE 1 REVENUE SPRINT (2026-09-13, deployed, on `origin`)
+- [x] 2 new SEO posts → 14 total: `blog/carpenter-apprentice-salary.html` ("carpenter apprentice salary") + `blog/how-to-become-a-welder.html` ("how to become a welder"); blog.html 14 cards + 14 BlogPosting; sitemap now 21 URLs, executable glob
+- [x] 12 per-trade Career Roadmap PDFs (`scripts/generate-roadmaps.py` → `assets/roadmaps/<slug>-roadmap.pdf`) — site-consistent salary bands; served **extensionless** on surge (blocks .pdf); quiz email-capture success now offers the matching roadmap download (HEAD-guarded, null-safe)
+- [x] `tag=tradelift-20` verified on ALL 94 affiliate links (tools.html ×72 + tools post ×22); Amazon Associate ID confirmed by Pablo
+- [x] Merch pipeline: `merch/designs/` 12×3000px PNG+SVG (electrician, welder, hvac, plumber, …) + `merch/launch-kit.md` listings + `merch/README.md` (Etsy/Printful steps) + `merch/generate-merch.js`
+- [x] `docs/REVENUE-OPS.md` — $50K-by-Dec-22 ops plan: pillars, month-by-month table (Sep→Dec), ONLY-PABLO list, Jarvis-autonomy list, 3 scenarios, KPI dashboard
+- [x] Dual QA PASS (Rogers structural + Romanoff functional): 0 blocking; non-blocking notes → widget/quiz.html result-CTAs anchor-ids don't exist on trades.html (pre-existing, logged)
+- [x] DEPLOYED + verified (14 posts 200, roadmaps 200, careers.guide 200, sitemap 21, canonical surge, quiz CTA live)
+- [ ] Next (Pablo action): GSC verify → submit sitemap; Amazon Associates tax/payment interview; Etsy/Printful + payout accounts by Nov 1; migrate Formspree off disposable inbox
 
 ### Done & Shipped — HOST MOVE TO SURGE (2026-09-13, committed on `origin`)
 - [x] Repo rename → `tradelift` gave short github.io URL, then **full move OFF GitHub Pages**: live site = https://tradelift.surge.sh (no more github.io — confirmed 404)
@@ -98,4 +108,4 @@ Live site: https://tradelift.surge.sh/ (Surge.sh; deploy = `bash scripts/deploy-
 - Fix deploy blocker (credentials) — top priority.
 - Review + deploy Fury funnel wave.
 - Affiliate pages (tools per trade), more blog posts (2-4/mo), quiz share images (12), widget embed for schools, Meta retargeting pixel, Google Search Console verification.
-- Revenue playbooks live in docs/monetization.md + docs/conversion-funnel.md.
+- Revenue playbooks live in docs/monetization.md + docs/conversion-funnel.md.- [2026-09-14] Stark: generated the 12 quiz-funnel Career Roadmap PDFs (`scripts/generate-roadmaps.py` → `assets/roadmaps/<slug>-roadmap.pdf`). Salary bands = exact trades.html/quiz.js figures, IDENTICAL for all 12 (no contradiction possible with site). Blog-cited BLS medians for electrician/plumber/welder/HVAC/carpenter/pipefitter; 6 trades (auto/diesel/mason/roofer/ironworker/CM) marked "assumed — no dedicated post yet" in `assets/roadmaps/README.md`. Idempotent (invariant=1 → byte-identical reruns, md5-verified). Built-in verify: 12 PDFs exist, >10KB, 2 pages, pypdf text extract, quiz.js name/salary sync. Not deployed (per mission).
