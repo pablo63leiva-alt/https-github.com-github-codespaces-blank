@@ -774,6 +774,13 @@ body.nav-open .hamburger::after {
   margin-top: 16px;
 }
 
+.newsletter-benefit {
+  color: var(--text-white);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
 .newsletter-form {
   max-width: 480px;
   margin: 0 auto;
@@ -1325,6 +1332,12 @@ body.nav-open .hamburger::after {
 .exit-modal-submit {
   width: 100%;
   padding: 14px 28px;
+}
+
+.exit-modal-trust {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  margin-top: -2px;
 }
 
 .exit-modal-privacy {

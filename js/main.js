@@ -125,7 +125,8 @@
      Exit-Intent Modal (Lead Magnet)
      ============================================ */
   const MODAL_STORAGE_KEY = 'tradelift_exit_modal_dismissed';
-  const MODAL_VISITED_KEY = 'tradelift_has_visited';
+  const MODAL_SESSION_KEY = 'tradelift_exit_modal_session_shown';
+  const MODAL_CONVERTED_KEY = 'tradelift_exit_modal_converted';
   const ONESIGNAL_DISMISSED_KEY = 'tradelift_onesignal_dismissed';
 
   function createExitModal() {
@@ -140,12 +141,12 @@
       <div class="exit-modal-content">
         <button class="exit-modal-close" aria-label="Close modal">&times;</button>
         <div class="exit-modal-icon" aria-hidden="true">🎁</div>
-        <h2 id="exit-modal-title" class="exit-modal-title">Don't Leave Empty-Handed!</h2>
-        <p class="exit-modal-subtitle">Get your <strong>Free Trade Career Fit Guide</strong> — instant PDF download:</p>
+        <h2 id="exit-modal-title" class="exit-modal-title">Get the FREE Career Fit Guide — 12 Trades, 90-Day Plan, Real 2026 Salaries</h2>
+        <p class="exit-modal-subtitle">Not sure what to do after high school? Dreading student debt? The guide breaks down <strong>12 high-paying trades</strong>, what they really pay in 2026, and the exact first steps to start — no guesswork, no fluff.</p>
         <ul style="text-align:left;margin:0 auto 20px;padding-left:20px;max-width:320px;color:var(--text-body);font-size:0.9rem;line-height:1.8;list-style:disc">
-          <li>12 trade profiles with salary ranges</li>
+          <li>12 trade profiles with real 2026 salary ranges</li>
           <li>Pros &amp; cons for every trade</li>
-          <li>90-day career roadmap to get started</li>
+          <li>Copy-paste 90-day plan to get started</li>
         </ul>
         <form class="exit-modal-form" action="#" method="POST">
           <input type="hidden" name="_next" value="https://tradelift.surge.sh/assets/careers.guide">
@@ -164,9 +165,10 @@
             <div style="position:absolute;left:-9999px" aria-hidden="true">
               <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
             </div>
-            <button type="submit" class="btn btn-primary exit-modal-submit">Get Free PDF</button>
+            <button type="submit" class="btn btn-primary exit-modal-submit">Send Me the Free Guide</button>
+            <p class="exit-modal-trust">Free download &middot; No spam &middot; Unsubscribe anytime</p>
           </div>
-          <p id="exit-modal-privacy" class="exit-modal-privacy">We respect your privacy. Unsubscribe at any time.</p>
+          <p id="exit-modal-privacy" class="exit-modal-privacy">We respect your privacy.</p>
         </form>
         <div class="exit-modal-success hidden" aria-live="polite">
           <div class="exit-modal-success-icon" aria-hidden="true">✅</div>
@@ -182,12 +184,13 @@
   }
 
   function showExitModal() {
-    if (localStorage.getItem(MODAL_STORAGE_KEY)) {
-      return; // User already dismissed
+    if (localStorage.getItem(MODAL_STORAGE_KEY) || localStorage.getItem(MODAL_CONVERTED_KEY) || sessionStorage.getItem(MODAL_SESSION_KEY)) {
+      return;
     }
     const modal = document.getElementById('exit-modal') || createExitModal();
     modal.classList.add('show');
     document.body.style.overflow = 'hidden';
+    sessionStorage.setItem(MODAL_SESSION_KEY, 'true');
     
     // Focus trap
     const closeBtn = modal.querySelector('.exit-modal-close');
@@ -263,6 +266,7 @@
         form.classList.add('hidden');
         var success = form.parentElement.querySelector('.exit-modal-success');
         if (success) success.classList.remove('hidden');
+        localStorage.setItem(MODAL_CONVERTED_KEY, 'true');
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
       })
@@ -275,13 +279,9 @@
 
   // Initialize exit-intent modal
   function initExitModal() {
-    // Mark as visited
-    const hasVisited = localStorage.getItem(MODAL_VISITED_KEY);
-    localStorage.setItem(MODAL_VISITED_KEY, 'true');
-    
     // Desktop: mouseleave
     document.addEventListener('mouseleave', function (e) {
-      if (!hasVisited && e.clientY <= 0) {
+      if (e.clientY <= 0) {
         showExitModal();
       }
     }, { once: true });
@@ -289,7 +289,7 @@
     // Mobile: beforeunload (scroll up detection as fallback)
     let lastScrollY = window.scrollY;
     window.addEventListener('scroll', function () {
-      if (!hasVisited && window.scrollY < lastScrollY && window.scrollY < 100) {
+      if (window.scrollY < lastScrollY && window.scrollY < 100) {
         // User scrolled up near top - potential exit intent
         showExitModal();
       }
@@ -298,7 +298,7 @@
     
     // Beforeunload as last resort
     window.addEventListener('beforeunload', function () {
-      if (!hasVisited && !localStorage.getItem(MODAL_STORAGE_KEY)) {
+      if (!localStorage.getItem(MODAL_STORAGE_KEY)) {
         showExitModal();
       }
     });
@@ -339,8 +339,7 @@
     if (localStorage.getItem(ONESIGNAL_DISMISSED_KEY)) return;
     
     // Check if this is at least second visit
-    const hasVisited = localStorage.getItem(MODAL_VISITED_KEY);
-    if (!hasVisited) {
+    if (!sessionStorage.getItem(MODAL_SESSION_KEY)) {
       // First visit - don't prompt yet
       return;
     }

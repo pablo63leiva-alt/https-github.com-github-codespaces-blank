@@ -3,7 +3,7 @@
 # Requires: surge CLI logged in (email: tradelift056411@uberip.com, token stored in ~/.config/surge)
 # NOTE: surge.sh does not serve .pdf files (404) — the lead-magnet PDF is deployed under an
 # extensionless name (assets/careers.guide, served as application/octet-stream). js/main.js
-# points the exit-modal download/_next to that path with download="trade-lift-5-trades.pdf".
+# points the exit-modal download/_next to that path with download="TradeLift-Career-Fit-Guide.pdf".
 set -euo pipefail
 
 REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -12,8 +12,27 @@ DOMAIN="tradelift.surge.sh"
 
 trap 'rm -rf "$BUILD_DIR"' EXIT
 
-rsync -a --delete --exclude '.git' "$REPO_DIR/" "$BUILD_DIR/"
-cp "$REPO_DIR/assets/trade-lift-5-trades.pdf" "$BUILD_DIR/assets/careers.guide"
+# Regenerate the sitemap first so the fresh sitemap.xml is rsync'd into the build.
+node "$REPO_DIR/scripts/generate-sitemap.js"
+
+# Internal files stay off the public site; paid premium product + orphan PDF must not ship.
+rsync -a --delete \
+  --exclude '.git' \
+  --exclude 'docs/' \
+  --exclude 'scripts/' \
+  --exclude '__pycache__/' \
+  --exclude 'PROGRESS.md' \
+  --exclude 'AGENTS.md' \
+  --exclude 'CLAUDE.md' \
+  --exclude '.pa11yci.json' \
+  --exclude 'node_modules/' \
+  --exclude 'package.json' \
+  --exclude 'package-lock.json' \
+  --exclude '/*.py' \
+  --exclude '/*.md' \
+  --exclude 'assets/premium/' \
+  --exclude 'assets/trade-lift-5-trades.pdf' \
+  "$REPO_DIR/" "$BUILD_DIR/"
 
 # Surge serves .pdf as 404, so every roadmap PDF is also deployed under its
 # extensionless name (served as application/octet-stream, same pattern as careers.guide).
@@ -22,8 +41,6 @@ for pdf in "$REPO_DIR"/assets/roadmaps/*-roadmap.pdf; do
     cp "$pdf" "$BUILD_DIR/assets/roadmaps/$(basename "$pdf" .pdf)"
   fi
 done
-
-node "$REPO_DIR/scripts/generate-sitemap.js"
 
 # Feed a newline so surge doesn't wait on TTY prompts (account already authenticated).
 printf '\n' | script -qec "surge $BUILD_DIR $DOMAIN" /dev/null
