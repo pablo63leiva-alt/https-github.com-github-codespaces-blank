@@ -9,7 +9,7 @@ Live site: https://tradelift.surge.sh/ (Surge.sh; deploy = `bash scripts/deploy-
 
 ## Milestones
 
-### Done & Shipped — SESSION 2026-09-15 8AM: REVENUE SPRINT #2 (committed `?`, deployed, live-verified)
+### Done & Shipped — SESSION 2026-09-15 8AM: REVENUE SPRINT #2 (committed `a122220`, deployed, live-verified)
 - [x] **NEW PAGE `tradeschools.html`** — "Trade Schools & Training" lead-gen hub (~2200 words): trade-school vs apprenticeship table, 12-trade training-path grid (salaries == quiz.js/trades.html canonicals), top US trade schools summary w/ official links + FTC disclosure, quiz + newsletter funnel integration. High-CPA education play. **Deployed + live 200.**
 - [x] **NEW PAGE `privacy.html`** — AdSense-ready Privacy Policy: Formspree/localStorage data handling, future ads/analytics, CCPA/GDPR rights, COPPA, affiliate disclosure, contact placeholder. Canonical surge, footer in all pages. **Deployed + live 200.**
 - [x] **Wiring:** `Trade Schools` nav + footer link on all 7 main pages + privacy footer; quiz email-capture success now has "Compare top trade schools" CTA; sitemap 32 URLs (idempotent ×2); robots refs sitemap.
