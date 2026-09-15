@@ -1389,6 +1389,40 @@ body.nav-open .hamburger::after {
 }
 
 /* ============================================
+   Sticky Quiz Bar — mobile CTA
+   ============================================ */
+.sticky-quiz-bar {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .sticky-quiz-bar {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1500;
+    background-color: var(--bg-card);
+    border-top: 1px solid var(--border-color);
+    padding: 12px 16px;
+    padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-white);
+    background-color: var(--accent-orange-deep);
+    transition: background-color var(--transition);
+  }
+
+  .sticky-quiz-bar:hover {
+    background-color: var(--accent-orange-deeper);
+    color: var(--text-white);
+  }
+}
+
+/* ============================================
    Print
    ============================================ */
 @media print {
