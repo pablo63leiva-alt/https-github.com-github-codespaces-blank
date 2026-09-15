@@ -1,15 +1,25 @@
 # TradeLift — Progress Tracker
 
-**Last updated:** Monday, September 14, 2026 (2:20 PM EDT) — MEGA-SPRINT: 6 affiliate posts deployed (22 total), 2nd paid product built, lead-gen + bounty playbooks, CRO fixes, 12 new docs, secrets-secured deploy
+**Last updated:** Tuesday, September 15, 2026 (8:30 AM EDT) — REVENUE SPRINT #2: Trade Schools lead-gen hub + privacy/AdSense readiness deployed
 
-## Status: 🟢 PRODUCTION LIVE @ https://tradelift.surge.sh — revenue assets deployed
-
-## Status: 🟢 PRODUCTION LIVE @ https://tradelift.surge.sh — revenue assets deployed
+## Status: 🟢 PRODUCTION LIVE @ https://tradelift.surge.sh — 2 new pages live, 32-URL sitemap
 
 Live site: https://tradelift.surge.sh/ (Surge.sh; deploy = `bash scripts/deploy-surge.sh`). GitHub Pages disabled 2026-09-13; the `pages` remote repo is an archived code mirror only — never push there (dead workflow would re-enable Pages; editing workflows needs `workflow` scope). Dev copy: `origin`.
 **Email capture is now REAL (was placeholder):** Newsletter → Formspree `xqpkvyjg`, Quiz career-roadmap capture → Formspree `xzebljww`. Both live-tested `{"ok":true}`. Newsletter double-submit + false-success bugs fixed; quiz already clean (full 2-pass subagent review).
 
 ## Milestones
+
+### Done & Shipped — SESSION 2026-09-15 8AM: REVENUE SPRINT #2 (committed `?`, deployed, live-verified)
+- [x] **NEW PAGE `tradeschools.html`** — "Trade Schools & Training" lead-gen hub (~2200 words): trade-school vs apprenticeship table, 12-trade training-path grid (salaries == quiz.js/trades.html canonicals), top US trade schools summary w/ official links + FTC disclosure, quiz + newsletter funnel integration. High-CPA education play. **Deployed + live 200.**
+- [x] **NEW PAGE `privacy.html`** — AdSense-ready Privacy Policy: Formspree/localStorage data handling, future ads/analytics, CCPA/GDPR rights, COPPA, affiliate disclosure, contact placeholder. Canonical surge, footer in all pages. **Deployed + live 200.**
+- [x] **Wiring:** `Trade Schools` nav + footer link on all 7 main pages + privacy footer; quiz email-capture success now has "Compare top trade schools" CTA; sitemap 32 URLs (idempotent ×2); robots refs sitemap.
+- [x] **SEO fix:** BlogPosting JSON-LD now carries `description` on all 22 entries (parsed from each post's meta description; JSON valid, desc ≤160).
+- [x] **New revenue stream:** `resources.html` — "Student Money-Savers" section: Amazon Prime Student + Audible free-trial links (?tag=tradelift-20) + full Amazon Associates disclosure.
+- [x] **Bug fixes (js/main.js):** exit-modal focus-trap idempotent (dataset guard) + live focusable recompute (no stale-capture); removed dead `beforeunload` handler.
+- [x] **Dual QA:** Romanoff PASS (0 crit/major; fixed: Diesel/Automotive naming parity, privacy footer gap). Rogers PASS (fixed: privacy footer active-state, footer link order, focus-trap live recompute, sitemap regen to 32).
+- [x] **Live-verified:** tradeschools/privacy 200, all key pages 200, sitemap 32 live, protected files still 404.
+- [ ] **NEXT (Pablo):** Gumroad account + publish $12 guide (storefront-launch-kit.md ready); Buttondown free tier + migrate email; UTI/Lincoln partner pitches (CPL); real contact email replaces hello@ placeholder; migrate Formspree off disposable inbox.
+- [ ] **NEXT (Jarvis):** premium-CTA once Gumroad live; 44 /s?k= affiliate links → /dp/ ASINs; GSC submit; email-sequence automation.
 
 ### Done & Shipped — SESSION 2026-09-14: CAREER GUIDE PDF + 2 AFFILIATE POSTS + SOCIAL/DOCS (squad)
 - [x] **Stark:** `scripts/generate_career_guide.py` → `assets/careers.guide` — 15-page branded Trade Career Fit Guide (12 trades + 90-day plan + resources), **salary bands fixed to match quiz.js/trades.html canonicals** (was spec-derived) + verified `Salary bands verified: OK`

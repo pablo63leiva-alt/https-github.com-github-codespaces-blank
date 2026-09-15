@@ -404,3 +404,20 @@ Each manager has sub-subagents working under them. Managers handle strategy; sub
 - [ ] Formspree dashboard monitoring (daily)
 - [ ] Google Analytics on site (traffic sources, quiz completions, conversions)
 - [ ] Amazon Associates dashboard monitoring (daily once AdSense/affiliate running)
+
+---
+
+## 11. SESSION — 2026-09-15 (8:00–8:45 AM EDT) — REVENUE SPRINT #2 (deployed, committed `?`, origin sync pending)
+
+**Directive:** resume from mega-sprint; maximum urgency; full autonomy. Executed:
+
+- **[Hawkeye] NEW `tradeschools.html`** — Trade Schools & Training lead-gen hub (~2200 words, CollectionPage JSON-LD, canonical surge, nav/footer w/ active). Trade-school vs apprenticeship table, 12-trade training paths (salaries = quiz.js/trades.html canonicals verbatim), top US trade schools w/ official links (uti.edu, lincolntech.edu, tulsaweldingschool.com, williamson.edu, ntma.org) + FTC disclosure, quiz CTA + newsletter funnel. High-CPA education play for Stream B.
+- **[Fury] NEW `privacy.html`** — AdSense-ready Privacy Policy (+WebPage JSON-LD): Formspree/localStorage collection, future ads/analytics, CCPA/GDPR, COPPA 16+, Amazon Associates disclosure, contact placeholder `hello@tradelift.surge.sh`.
+- **Wiring (all 7 main pages):** `Trade Schools` nav + footer links; every footer now has Privacy Policy link; quiz email-capture success now shows "Compare top trade schools" CTA (btn-outline → tradeschools.html); sitemap generator mainPages +2 → 32 URLs (idempotent ×2); new pages live 200.
+- **SEO fix:** BlogPosting JSON-LD `description` added to all 22 entries (scripted from each post's `<meta name="description">`; 22/22, JSON valid, ≤160 chars).
+- **Revenue:** resources.html "Student Money-Savers" section → Amazon Prime Student (`/gp/student/signup/info?tag=tradelift-20`) + Audible (`/Audible-Free-Trial-Digital-Membership/dp/B00NB86OYE?tag=tradelift-20`) + standard Amazon Associates disclosure.
+- **Bug fixes (js/main.js):** exit-modal focus trap → idempotent (`dataset.trapBound` guard) + live focusable recompute inside handler (fixes stale-capture after success-state hides the submit button); removed dead `beforeunload` listener. `node --check` OK.
+- **QA:** Romanoff Pass 2 **PASS** (0 crit/major) → fixed Diesel "Technician"→"Mechanic" naming, privacy footer Trade-Schools gap. Rogers Pass 1 **PASS** after fixes → moved privacy footer `aria-current` to Privacy link, footer link-order parity, Automotive "Technician"→"Mechanic", sitemap regen. Full sweep: 34 HTML clean, 0 dup IDs, valid JSON-LD, links resolve, title/desc limits.
+- **DEPLOYED + live-verified:** new pages 200, key pages 200, sitemap 32 live, docs/scripts/premium PDF still 404 (secrets secure).
+- **NEXT (Pablo):** Gumroad publish $12 guide; Buttondown + email migrate; UTI/Lincoln partner pitches; real contact email; Formspree off disposable inbox.
+- **NEXT (Jarvis):** premium CTA after Gumroad; 44 `/s?k=` affiliate links → `/dp/` ASINs; GSC sitemap submit; email auto-sequence; revenue dashboard.
