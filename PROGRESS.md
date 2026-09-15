@@ -1,8 +1,10 @@
 # TradeLift — Progress Tracker
 
-**Last updated:** Tuesday, September 15, 2026 (8:30 AM EDT) — REVENUE SPRINT #2: Trade Schools lead-gen hub + privacy/AdSense readiness deployed
+**Last updated:** Tuesday, September 15, 2026 (9:00 AM EDT) — REVENUE SPRINT #2 shipped; CRO quick-wins (uncommitted) + squad fan-out #2 (3 lanes queued)
 
 ## Status: 🟢 PRODUCTION LIVE @ https://tradelift.surge.sh — 2 new pages live, 32-URL sitemap
+
+> WORKING TREE (9:00 AM, NOT committed/deployed yet): Shuri CRO — sticky-quiz-bar (css/style.css + index.html + trades.html), quiz results CTA text, getting-started newsletter copy. Hawkeye (2 blog posts), Stark (paid guide #2 + landing), Vision (interlinks) queued — retry on capacity.
 
 Live site: https://tradelift.surge.sh/ (Surge.sh; deploy = `bash scripts/deploy-surge.sh`). GitHub Pages disabled 2026-09-13; the `pages` remote repo is an archived code mirror only — never push there (dead workflow would re-enable Pages; editing workflows needs `workflow` scope). Dev copy: `origin`.
 **Email capture is now REAL (was placeholder):** Newsletter → Formspree `xqpkvyjg`, Quiz career-roadmap capture → Formspree `xzebljww`. Both live-tested `{"ok":true}`. Newsletter double-submit + false-success bugs fixed; quiz already clean (full 2-pass subagent review).

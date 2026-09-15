@@ -421,3 +421,68 @@ Each manager has sub-subagents working under them. Managers handle strategy; sub
 - **DEPLOYED + live-verified:** new pages 200, key pages 200, sitemap 32 live, docs/scripts/premium PDF still 404 (secrets secure).
 - **NEXT (Pablo):** Gumroad publish $12 guide; Buttondown + email migrate; UTI/Lincoln partner pitches; real contact email; Formspree off disposable inbox.
 - **NEXT (Jarvis):** premium CTA after Gumroad; 44 `/s?k=` affiliate links → `/dp/` ASINs; GSC sitemap submit; email auto-sequence; revenue dashboard.
+
+---
+
+## 12. FULL SESSION ARCHIVE — Tuesday, 2026-09-15 (verbatim)
+
+> This section is the archive-of-record for the 2026-09-15 session. The user explicitly asked that EVERYTHING — all prompts, all work, all state — be persisted here. Do not overwrite; append below.
+
+### 12.1 User prompts received today (verbatim)
+
+1. `resume Jarvis`
+2. `check your github memeory RESUME JARIVS`
+3. `Im trusting you jarvis i know you'll reach that goal Remmemebr ultimate urgency`
+4. `what is the goal again JArvis and how are you going to get there?`
+5. `dont stop Jarvis Keep working until you have no more to give keep going get 100 subagents on the job get even more if you want i trust you Jarvis go make ME THAT MONEY`
+6. `i want you to save ALLLL that has been done today to your memeory now including all the prompts ive given you and everythuing`
+
+### 12.2 Session timeline (all times EDT)
+
+**~8:05 AM — RESUME + STATE LOAD:**
+- Read `docs/SESSION-MEMORY.md` + `PROGRESS.md` + `AGENTS.md` from `/workspaces/https-github.com-github-codespaces-blank` (= TradeLift repo).
+- Confirmed live site matches local HEAD `9919f00` (mega-sprint): 200 on / , sitemap 30 live, premium PDF 404. Validated surge auth via `~/.netrc` (`tradelift056411@uberip.com`), surge CLI v0.44.1.
+- Pushed local mega-sprint → **origin** (6b56f19..9919f00) — dev record synced.
+
+**~8:05–8:20 AM — TECHNICAL MINORS (committed in `a122220`):**
+- `blog.html`: injected `description` into all **22 BlogPosting** JSON-LD entries (script parsed each post's `<meta name="description">`; first script pass failed on slug+`.html` double-extension + missing comma — debugged, reverted via `git checkout`, fixed, 22/22 valid, all ≤160 chars).
+- `js/main.js`: exit-modal focus trap → **idempotent** (`modal.dataset.trapBound` guard) + **live focusable recompute** inside the keydown handler (fixes stale capture after success-state hides the submit button); removed dead `beforeunload` listener. `node --check` OK.
+
+**~8:20–8:30 AM — BUILD + WIRE (subagents Hawkeye + Fury, then Jarvis wiring):**
+- **[Hawkeye] `tradeschools.html`** (root) — "Trade Schools & Training" lead-gen hub (~2200 words): trade-school vs apprenticeship table; real cost figures from `is-trade-school-worth-it.html`; 12-trade training-path grid with exact quiz.js/trades.html salary bands; top US trade schools w/ official links (uti.edu, lincolntech.edu, tulsaweldingschool.com, williamson.edu, ntma.org — all `target=_blank rel="noopener noreferrer"`) + FTC-style disclosure + newsletter form + quiz CTA. CollectionPage JSON-LD, canonical, full OG/Twitter. Trade names: NB internally quiz uses "Automotive Mechanic"+"Diesel Mechanic" and Pipefitter (not elevator installer).
+- **[Fury] `privacy.html`** (root) — AdSense-ready Privacy Policy (~560 words): Formspree + localStorage keys doc'd (`tradelift_exit_modal_*`, `tradelift_capture_events`), ads/analytics future (conditional language), CCPA/GDPR rights, COPPA 16+, Amazon Associates disclosure, contact placeholder `hello@tradelift.surge.sh`. WebPage JSON-LD, canonical.
+- **Nav/footer wiring** across all 7 main pages (index/trades/getting-started/resources/blog/tools/quiz): `Trade Schools` nav item after Blog + footer quick-link; every footer now links `privacy.html`. Added same to tradeschools.privacy nav parity + privacy footer Trade-Schools link + tradeschools footer Privacy link.
+- **`quiz.html`**: added "Unsure about school? Compare top trade schools" btn-outline CTA inside `#quiz-email-success` (shows only post-capture; resetEmailCapture handles it correctly).
+- **`resources.html`**: new "Student Money-Savers & Study Perks" section — Amazon **Prime Student** (`https://www.amazon.com/gp/student/signup/info?tag=tradelift-20`) + **Audible** (`https://www.amazon.com/Audible-Free-Trial-Digital-Membership/dp/B00NB86OYE?tag=tradelift-20`) + standard Amazon Associates disclosure (Stream D bounty lane).
+- **`scripts/generate-sitemap.js`**: mainPages +`tradeschools.html`, `privacy.html`. Sitemap regenerated → **32 URLs** (idempotent ×2).
+
+**~8:30–8:50 AM — DUAL QA + FIX + COMMIT + DEPLOY:**
+- **Romanoff Pass 2: PASS** (0 crit/major). Findings fixed: longevity parity "Diesel Technician"→"Diesel Mechanic" (tradeschools.html), privacy footer missing Trade Schools link. INFOs logged: placeholder contact email; tulsaweldingschool.com unreachable from this env (worth manual check).
+- **Rogers Pass 1: CONDITIONAL → PASS** after fixes. All structural gates pass (34 HTML clean, 0 dup IDs, JSON-LD 22/22 BlogPosting w/ desc, canonicals, internal links, no secrets, a11y, SEO limits). Minor fixes applied: Automotive "Technician"→"Mechanic" (quiz.js parity), tradeschools footer link order, privacy footer `aria-current` moved to Privacy Policy. Focus-trap live-recompute (Rogers' MAJOR) applied as described in 12.2.
+- **Full sweep:** 34 HTML well-formed, 0 dup IDs, JSON-LD valid, internal links resolve, titles ≤60 / desc ≤160, node --check OK, CSS braces balanced.
+- **COMMITS:** `a122220` (feat: revenue sprint #2 — tradeschools hub + privacy, BlogPosting descriptions, quiz-trade-school CTA, Prime/Audible bounty links, exit-modal focus-trap fix); `7d51a84` (chore: session save); `af44f35` (docs: record hash).
+- **DEPLOYED** via `bash scripts/deploy-surge.sh` → live verified: `/tradeschools.html` 200, `/privacy.html` 200, all key pages 200, sitemap 32 live, protected files still 404.
+- **Pushed origin** 9919f00..af44f35.
+
+**~8:45 AM — GOAL BRIEF GIVEN (dir prompt #4):** $50K by Dec 22, 2026 = Stream A affiliates ($15–25K) + Stream B trade-school CPL ($10–15K, tradeschools hub live) + Stream C products ($5–10K) + Stream D email ($5–10K) + Stream E merch ($3–5K) + Stream F ads/sponsors ($2–5K), engine = traffic → quiz → email → roadmap/guide → paid+affiliate+CPL.
+
+**~9:00 AM — SQUAD FAN-OUT #2 (dir prompt #5):**
+- **[Shuri] CRO quick wins — DONE (working tree, NOT yet committed/deployed):**
+  - `css/style.css`: added `.sticky-quiz-bar` (mobile-only fixed-bottom CTA, theme vars, safe-area inset, z-index 1500 below exit-modal 2000). Braces balanced 212/212.
+  - `index.html` + `trades.html`: `<a class="sticky-quiz-bar" href="quiz.html">Take the 2-Minute Quiz → Find Your Trade</a>` before `</body>`.
+  - `quiz.html`: results CTA button text "Explore Trades" → "See Your Career Roadmap" (JS untouched).
+  - `getting-started.html`: newsletter heading → "Free Career Fit Guide + Weekly Trade Pay Reports" + benefit-led description.
+  - No new IDs; node --check OK both JS.
+- **Hawkeye (2 new posts: best-multimeters-for-electricians + how-to-get-a-trade-apprenticeship), Stark (paid guide #2 + first-apprenticeship.html landing + storefront docs), Vision (interlinking pass on 5 posts) — FAILED TO LAUNCH** (chat admission capacity). **STATUS: PENDING RETRY NEXT.**
+
+### 12.3 State at this save (9:00 AM EDT)
+
+- HEAD `af44f35` pushed to origin. **Working tree has UNCOMMITTED Shuri CRO changes** (css/style.css, index.html, trades.html, quiz.html, getting-started.html).
+- Sitemap 32 URLs; site live at https://tradelift.surge.sh (running `a122220` build — CRO bar not yet live).
+- To-do queue (from §9.5 + this session): Hawkeye 2 posts + wire blog.html; Stark guide #2 + landing; Vision interlinks; then dual QA → deploy → docs → push.
+
+### 12.4 Standing intent (do not forget)
+
+- Mission = **$50K by Dec 22, 2026**. User: full autonomy, maximum urgency, keep working, "until you have no more to give", use many subagents, "go make ME THAT MONEY".
+- Rules recap: dual QA (Rogers Pass1 + Romanoff Pass2) before deploy; commit+push to origin as record; deploy via `bash scripts/deploy-surge.sh`; never push to `pages` remote (archived); never log/commit secrets; update PROGRESS.md + THIS FILE every session end.
+- Every sprint ships and verifies; user values BOTH speed and quality (final-deadline + max-urgency directives).
