@@ -6,7 +6,7 @@ var execSync = require('child_process').execSync;
 
 var SITE_URL = 'https://tradelift.surge.sh';
 var ROOT = path.resolve(__dirname, '..');
-var mainPages = ['index.html', 'trades.html', 'getting-started.html', 'resources.html', 'blog.html', 'tools.html', 'quiz.html', 'badge.html'];
+var mainPages = ['index.html', 'trades.html', 'getting-started.html', 'resources.html', 'blog.html', 'tools.html', 'quiz.html', 'badge.html', 'tradeschools.html', 'privacy.html'];
 var blogPosts = fs.readdirSync(path.join(ROOT, 'blog'))
   .filter(function (f) { return /\.html$/.test(f); })
   .sort()

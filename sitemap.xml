@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://tradelift.surge.sh/getting-started.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -45,6 +45,18 @@
   <url>
     <loc>https://tradelift.surge.sh/badge.html</loc>
     <lastmod>2026-09-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tradelift.surge.sh/tradeschools.html</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tradelift.surge.sh/privacy.html</loc>
+    <lastmod>2026-09-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

@@ -202,20 +202,28 @@
     const lastFocusable = focusable[focusable.length - 1];
     
     if (firstFocusable) firstFocusable.focus();
-    
-    modal.addEventListener('keydown', function trapFocus(e) {
-      if (e.key === 'Tab') {
-        if (e.shiftKey && document.activeElement === firstFocusable) {
-          e.preventDefault();
-          lastFocusable?.focus();
-        } else if (!e.shiftKey && document.activeElement === lastFocusable) {
-          e.preventDefault();
-          firstFocusable?.focus();
+
+    if (!modal.dataset.trapBound) {
+      modal.dataset.trapBound = 'true';
+      modal.addEventListener('keydown', function trapFocus(e) {
+        if (e.key === 'Tab') {
+          const focusable = Array.from(modal.querySelectorAll('button, input, a')).filter(function (el) {
+            return !el.classList.contains('hidden') && el.getAttribute('tabindex') !== '-1';
+          });
+          const firstFocusable = focusable[0];
+          const lastFocusable = focusable[focusable.length - 1];
+          if (e.shiftKey && document.activeElement === firstFocusable) {
+            e.preventDefault();
+            lastFocusable && lastFocusable.focus();
+          } else if (!e.shiftKey && document.activeElement === lastFocusable) {
+            e.preventDefault();
+            firstFocusable && firstFocusable.focus();
+          }
+        } else if (e.key === 'Escape') {
+          hideExitModal();
         }
-      } else if (e.key === 'Escape') {
-        hideExitModal();
-      }
-    });
+      });
+    }
   }
 
   function hideExitModal() {
@@ -295,13 +303,6 @@
       }
       lastScrollY = window.scrollY;
     }, { passive: true });
-    
-    // Beforeunload as last resort
-    window.addEventListener('beforeunload', function () {
-      if (!localStorage.getItem(MODAL_STORAGE_KEY)) {
-        showExitModal();
-      }
-    });
     
     // Event delegation for modal actions
     document.addEventListener('click', function (e) {
