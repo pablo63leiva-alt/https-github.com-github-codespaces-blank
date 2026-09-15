@@ -1,10 +1,18 @@
 # TradeLift — Progress Tracker
 
-**Last updated:** Tuesday, September 15, 2026 (9:00 AM EDT) — REVENUE SPRINT #2 shipped; CRO quick-wins (uncommitted) + squad fan-out #2 (3 lanes queued)
+**Last updated:** Tuesday, September 15, 2026 (12:15 PM EDT) — 2026-09-15 PM SESSION: backlog cleared + deployed. `first-apprenticeship.html` paid-product landing page (`e18fda0`) + Vision interlinking on 8 posts live; sitemap 35 URLs.
 
-## Status: 🟢 PRODUCTION LIVE @ https://tradelift.surge.sh — 2 new pages live, 32-URL sitemap
+## Status: 🟢 PRODUCTION LIVE @ https://tradelift.surge.sh — new paid-product landing page + interlinking deployed, 35-URL sitemap
 
-> WORKING TREE (9:00 AM, NOT committed/deployed yet): Shuri CRO — sticky-quiz-bar (css/style.css + index.html + trades.html), quiz results CTA text, getting-started newsletter copy. Hawkeye (2 blog posts), Stark (paid guide #2 + landing), Vision (interlinks) queued — retry on capacity.
+### Done & Shipped — 2026-09-15 PM SESSION (committed `e18fda0`, deployed, origin synced)
+- [x] **NEW PAGE `first-apprenticeship.html`** — Stark's $12 paid-product landing page "Land Your First Trade Apprenticeship" (442 lines): 5-step system, resume/cover-letter templates, aptitude prep, 8 interview Q&As, FAQ + WebPage JSON-LD (5-Q FAQPage schema ↔ visible verbatim), apprentice-pay excerpt, `#buy` box at planned $12. Wired into sitemap generator → **35 URLs** (idempotent ×2); CTA added on `getting-started.html`.
+- [x] **Vision interlinking** — cross-links on 8 posts (apprentice-wages, electrician/plumber/HVAC/carpenter salary, welding equipment, electrician tools, is-trade-school-worth-it) → related gear/career/wages guides.
+- [x] **Dual QA (subagents):** Rogers Pass 1 + Romanoff Pass 2 → fixed: duplicate links in welding-equipment post (removed), FAQ over-claim in first-apprenticeship ("journey-level bands match the 12 trades" → "match the per-trade salary posts"), FAQ dash parity (`17-25` JSON-LD → `17–25`), typo "Q&As.with" → "Q&As with"; `&amp;` escaping. Re-verified FAQ 5/5 exact-match.
+- [x] **Deployed + live-verified:** first-apprenticeship/getting-started/welding-post/home 200, sitemap 35 live, quiz→tradeschool CTA + Prime/Audible bounty links live. Committed `e18fda0`, pushed origin.
+- [ ] **NEXT (Pablo — account-gated):** Gumroad account + publish $12 guides (launch kit ready); Buttondown + email migrate; UTI/Lincoln partner pitches; real contact email; Formspree off disposable inbox.
+- [ ] **NEXT (Jarvis):** Hawkeye affiliate-post wave (2 trade-school guides + 2 gear roundups); then dual QA → deploy.
+
+> PREVIOUS WORKING TREE (now committed): Shuri CRO sticky-quiz-bar + benefit newsletter copy shipped in `c54172e`; Hawkeye 2 posts (`best-multimeters-for-electricians`, `how-to-get-a-trade-apprenticeship`) shipped in `48a47da`.
 
 Live site: https://tradelift.surge.sh/ (Surge.sh; deploy = `bash scripts/deploy-surge.sh`). GitHub Pages disabled 2026-09-13; the `pages` remote repo is an archived code mirror only — never push there (dead workflow would re-enable Pages; editing workflows needs `workflow` scope). Dev copy: `origin`.
 **Email capture is now REAL (was placeholder):** Newsletter → Formspree `xqpkvyjg`, Quiz career-roadmap capture → Formspree `xzebljww`. Both live-tested `{"ok":true}`. Newsletter double-submit + false-success bugs fixed; quiz already clean (full 2-pass subagent review).

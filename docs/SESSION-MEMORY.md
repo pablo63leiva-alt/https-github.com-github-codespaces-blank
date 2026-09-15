@@ -487,3 +487,30 @@ Each manager has sub-subagents working under them. Managers handle strategy; sub
 - Mission = **$50K by Dec 22, 2026**. User: full autonomy, maximum urgency, keep working, "until you have no more to give", use many subagents, "go make ME THAT MONEY".
 - Rules recap: dual QA (Rogers Pass1 + Romanoff Pass2) before deploy; commit+push to origin as record; deploy via `bash scripts/deploy-surge.sh`; never push to `pages` remote (archived); never log/commit secrets; update PROGRESS.md + THIS FILE every session end.
 - Every sprint ships and verifies; user values BOTH speed and quality (final-deadline + max-urgency directives).
+
+---
+
+## 13. SESSION — 2026-09-15 (12:00–12:20 PM EDT) — BACKLOG CLEARED + DEPLOYED (`e18fda0`)
+
+**Directive:** `resume Jarvis` — resume from the 9:00 AM state; clear the uncommitted working tree.
+
+### State found at resume
+- HEAD `48a47da` (Hawkeye: `best-multimeters-for-electricians` + `how-to-get-a-trade-apprenticeship`; blog.html 24 cards/24 BlogPosting; sitemap 34). Shuri CRO + technical minors had already shipped in `c54172e`.
+- Uncommitted: 8 blog posts (Vision interlinking), `docs/storefront-launch-kit.md`, deleted `__pycache__`; untracked `first-apprenticeship.html` + `assets/premium/first-apprenticeship.pdf` + `scripts/generate_first_apprenticeship.py`.
+
+### Work completed
+1. **first-apprenticeship landing page wired:** added to `scripts/generate-sitemap.js` mainPages → sitemap **35 URLs** (idempotent ×2); added a paid-playbook CTA section to `getting-started.html` (btn → first-apprenticeship.html).
+2. **Baseline verify:** 35/35 HTML well-formed, 0 dup IDs, JS `node --check` OK, CSS braces 212/212 · 66/66 · 48/48.
+3. **Dual QA (subagents):**
+   - **Rogers Pass 1:** 0 critical / 1 major (duplicate links in `best-welding-equipment-for-beginners`) / 0 minor. INFO: "Yr 4" vs canonical "Year 3-4" label; FTC not legally required for first-party sale; sitemap idempotent.
+   - **Romanoff Pass 2:** 0 critical / 1 major (first-apprenticeship excerpt salary claims: page copies `apprentice-wages-by-year` journey bands `$60K–$80K+` / `$56K–$74K`, but FAQ claimed they "match the 12 trades on the Trades page" `$60K–$80K` / `$55K–$75K`) / 4 minor (FAQ dash mismatch, duplicate welding links, "Q&As.with" typo).
+4. **Fixes applied:** removed duplicate sentence (welding post); reworded FAQ claim to "match the per-trade salary posts" (both JSON-LD + visible, verbatim); JSON-LD dash `17-25`→`17–25`; typo → `Q&As with`; `&amp;`.
+5. **Re-verify:** FAQ JSON-LD ↔ visible 5/5 exact-match; HTML clean; sitemap 35 idempotent.
+6. **COMMIT `e18fda0`** (feat: first-apprenticeship paid-product landing page + PDF; Vision interlinking on 8 posts; sitemap 35; QA fixes) → **pushed origin**.
+7. **DEPLOYED** (`bash scripts/deploy-surge.sh`, 116 files, 31.1 MB) → live-verified: `first-apprenticeship.html` 200, `getting-started.html` 200, welding post 200, home 200, sitemap **35 locs** live; quiz→tradeschool CTA + Prime/Audible bounty links live.
+
+### Open / next
+- **Pablo (account-gated):** Gumroad publish ($12 guides; launch kit ready), Buttondown + email migrate, UTI/Lincoln partner pitches, real contact email, Formspree off disposable inbox.
+- **Jarvis (next wave):** Hawkeye affiliate posts (2 trade-school guides + 2 gear roundups) → dual QA → deploy.
+- **Known minor / deferred:** ~347 `amazon.com/s?k=` search affiliate links could be swapped to `/dp/` ASINs (higher conversion) but this requires real ASIN verification — do NOT fabricate ASINs (would 404 and kill commission); needs careful lookup or Pablo/API access.
+- **Pre-existing site drift noted:** `trades.html`/`quiz.js` plumber journey `$55K–$75K` vs blog table `$56K–$74K` (and electrician `$60K–$80K` vs `$60K–$80K+`) — reconcile in a future salary-parity pass.
