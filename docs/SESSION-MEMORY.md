@@ -514,3 +514,29 @@ Each manager has sub-subagents working under them. Managers handle strategy; sub
 - **Jarvis (next wave):** Hawkeye affiliate posts (2 trade-school guides + 2 gear roundups) → dual QA → deploy.
 - **Known minor / deferred:** ~347 `amazon.com/s?k=` search affiliate links could be swapped to `/dp/` ASINs (higher conversion) but this requires real ASIN verification — do NOT fabricate ASINs (would 404 and kill commission); needs careful lookup or Pablo/API access.
 - **Pre-existing site drift noted:** `trades.html`/`quiz.js` plumber journey `$55K–$75K` vs blog table `$56K–$74K` (and electrician `$60K–$80K` vs `$60K–$80K+`) — reconcile in a future salary-parity pass.
+
+---
+
+## 14. SESSION — 2026-09-15 (12:20–12:45 PM EDT) — CONTENT WAVE 3 DEPLOYED (`9a2fee9`)
+
+**Directive:** keep working through the revenue sprint; next = Immediate Sprint item 4 (Hawkeye affiliate posts).
+
+### Work completed
+1. **4 new posts built (28 total live):**
+   - `blog/best-work-boots-for-apprentices.html` — 6 picks, 7 Amazon `tag=tradelift-20` links (ASTM safety, EH/composite toe, waterproof), "Boot Care" pro tip, 4 FAQ.
+   - `blog/best-welding-helmets-for-beginners.html` — 7 picks, 7 Amazon links (auto-darkening, shade, reaction), 4 FAQ.
+   - `blog/how-to-pay-for-trade-school.html` — FAFSA → Pell → WIOA → employer → scholarships → earn-while-learn; 0 affiliates; 5 FAQ; links `studentaid.gov`, `skillsusa.org`.
+   - `blog/what-to-expect-first-year-trade-school.html` — classroom/lab/schedule/grading per trade; 0 affiliates; 4 FAQ.
+2. **blog.html wired:** 28 cards + 28 BlogPosting entries (all with headline/url/datePublished/description); gear posts added at top of grid. **Sitemap → 39 URLs** (idempotent).
+3. **QA fixes (Rogers Pass 1):** welder band corrected `$50K-$70K+`→`$45K-$70K+` (would've contradicted every other page); read-time card sync; Trade Schools nav + footer Privacy links added to both gear posts. **Romanoff Pass 2: PASS** — 44/44 internal links resolve, 16/16 salary mentions match canonicals, 14/14 affiliate tags `tag=tradelift-20`, 0 fake ASINs, edu posts affiliate-free, no orphans in blog.html. Minor (helmet meta `$250+`→`$300+`) fixed.
+4. **DEPLOYED + live-verified:** all 4 posts 200, blog.html 200, sitemap 39 locs live. Committed `9a2fee9`, pushed origin.
+
+### Growth proposals recorded (from Romanoff review, for future sprints)
+- Swap `/s?k=` search links → real `/dp/` ASINs for the 7 boot + 7 helmet picks (search links convert worse) — requires genuine ASIN verification, not fabrication.
+- Add mid-article quiz/badge email-capture CTAs in gear posts (currently bottom-only); badge block beside helmet comparison table.
+- how-to-pay post: move quiz CTA above the fold + crosslink tradeschools.html from union-apprenticeship section.
+
+### State at save (12:45 PM EDT)
+- HEAD `9a2fee9` pushed to origin. Live = this commit. 28 posts, 39 sitemap URLs, 14 affiliate links added this wave (total Amazon tags sitewide well past 100).
+- **Pablo (account-gated):** Gumroad publish ($12 guides x2), Buttondown + email migrate, UTI/Lincoln partner pitches, real contact email, Formspree off disposable inbox.
+- **Jarvis next:** implement Romanoff growth proposals (mid-post CTAs, ASIN swaps); more affiliate posts; salary-parity reconciliation pass.
