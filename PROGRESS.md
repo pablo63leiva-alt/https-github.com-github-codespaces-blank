@@ -1,18 +1,29 @@
 # TradeLift — Progress Tracker
 
-**Last updated:** Tuesday, September 15, 2026 (12:45 PM EDT) — PM SESSION: paid-product landing page + 4 new posts deployed. 28 posts live, sitemap 39 URLs.
+**Last updated:** Tuesday, September 15, 2026 (12:55 PM EDT) — 12:55 SAVE OF RECORD: TradeLift (28 posts, 39 sitemap, deployed) + NEW side project RESEARCHED & SQUAD STOOD UP.
 
-## Status: 🟢 PRODUCTION LIVE @ https://tradelift.surge.sh — 28 blog posts, 2 new pages, 39-URL sitemap
+# TWO TRACKS (as of 2026-09-15)
+
+## Track A — TradeLift (@ tradelift.surge.sh) — PRIMARY MONEY ENGINE
+## Status: 🟢 PRODUCTION LIVE — 28 blog posts, 2 new pages, 39-URL sitemap, email capture live
+
+> Deployed today: `e18fda0` (first-apprenticeship landing + interlinking), `9a2fee9` (4 new posts), `def214b` (CRO growth-tweaks). All pushed to origin. Next wave (affiliate gear posts + mid-article CTAs + salary-parity) QUEUED.
 
 ### Done & Shipped — 2026-09-15 PM SESSION #2 (committed `9a2fee9`, deployed, origin synced)
-- [x] **Hawkeye: 4 NEW posts (28 total)** — `blog/best-work-boots-for-apprentices.html` + `blog/best-welding-helmets-for-beginners.html` (gear affiliates, 7 Amazon links each, `tag=tradelift-20`; salaries = canonicals), `blog/how-to-pay-for-trade-school.html` + `blog/what-to-expect-first-year-trade-school.html` (trade-school education guides, 0 affiliates, funds how-to + first-year reality → lead-gen funnel). blog.html wired to 28 cards + 28 BlogPosting; sitemap → **39 URLs** (idempotent ×2).
-- [x] **Dual QA (subagents):** Rogers Pass 1 — PASS after 1 major fix (welder band `$50K-$70K+`→`$45K-$70K+`), 2 minors (read-time, nav). Romanoff Pass 2 — **PASS** (44/44 links OK, 16/16 salary mentions match canonicals, 14/14 affiliate tags, 0 fake ASINs, edu posts affiliate-free, nav/footer parity). 1 minor (helmet price range $250→$300) fixed. **28 posts live | all 200 | sitemap 39 live.**
+- [x] **Hawkeye: 4 NEW posts (28 total)** — `blog/best-work-boots-for-apprentices.html` + `blog/best-welding-helmets-for-beginners.html` (gear affiliates, 7 Amazon links each, `tag=tradelift-20`), `blog/how-to-pay-for-trade-school.html` + `blog/what-to-expect-first-year-trade-school.html` (trade-school education guides, 0 affiliates). blog.html 28 cards + 28 BlogPosting; sitemap → **39 URLs** (idempotent ×2).
+- [x] **Dual QA (subagents):** Rogers Pass 1 — 1 major fixed (welder band → $45K-$70K+) + 2 minors (read-time, nav). Romanoff Pass 2 — **PASS** (44/44 links, 16/16 salaries, 14/14 affiliate tags, 0 fake ASINs, edu posts clean). 1 minor (helmet price $250→$300) fixed. **All live 200, sitemap 39 live.**
+- [x] **CRO `def214b`:** mid-article crosslinks — helmets→welder starter kit, how-to-pay→tradeschools hub (Romanoff growth proposals).
 
-### Done & Shipped — 2026-09-15 PM SESSION #1 (committed `e18fda0` + docs `d2db839`, deployed, origin synced)
-- [x] **NEW PAGE `first-apprenticeship.html`** — Stark's $12 paid-product landing page (442 lines): 5-step system, resume/cover-letter templates, aptitude prep, 8 Q&As, FAQPage+WebPage JSON-LD, apprentice-pay excerpt, `#buy` box. Wired into sitemap (→35 URLs) + getting-started CTA.
-- [x] **Vision interlinking** on 8 posts + rows; **dual-QA fixes** (dedup links, FAQ claim accuracy, dash parity, typo); **DEPLOYED + live-verified**; committed + pushed origin.
+## Track B — TableText (working name) — RESTAURANT SMS LOYALTY AUTOMATION (NEW 2026-09-15)
+## Status: 🔵 RESEARCHED + SQUAD STOOD UP by 12:55 PM save — brief at `docs/vibe-smart-loyalty.md`
+- [x] **Market research (subagent, live-verified):** white space confirmed — nothing purpose-built for QR→form→CRM→SMS→blasts for independent restaurants. Textdrip precedent (indie $20-75/mo works). Positioning recommended: $49/mo Table Lead Kit + $99/mo DFY wedge; "works with ANY POS"; flat price, no per-text math.
+- [x] **Technical research (subagent, live-verified):** SMS providers compared (Twilio $0.012-15/msg full price; SimpleTexting no-code fastest; Textlocal SHUT DOWN), 10DLC/TCPA compliance captured (11-element consent disclaimer verbatim; $500-1500/msg fines), MVP stack = Tally+Carrd+SimpleTexting (~$60-90/mo) or Twilio+Supabase+Vercel (~$180-280).
+- [x] **New squad stood up:** Manager **T'Challa** + 6 subagents (Shuri², Namor, Nakia, Okoye, M'Baku, Ramonda) — full roles in brief §4. Runs parallel to TradeLift lane.
+- [ ] **NEXT:** Pablo picks name/GTM/stack → T'Challa scaffolds no-code MVP (needs SimpleTexting/Twilio account under Pablo's email) → Nakia writes consent line → Okoye QR tent + blast templates → M'Baku QA → Ramonda pilot outreach.
 
-> PREVIOUS WORKING TREE (now committed earlier): Shuri CRO sticky-quiz-bar + benefit newsletter (`c54172e`); Hawkeye multimeters + apprenticeship posts (`48a47da`).
+---
+
+## Track A Detail — Prior milestones (Keep)
 
 Live site: https://tradelift.surge.sh/ (Surge.sh; deploy = `bash scripts/deploy-surge.sh`). GitHub Pages disabled 2026-09-13; the `pages` remote repo is an archived code mirror only — never push there (dead workflow would re-enable Pages; editing workflows needs `workflow` scope). Dev copy: `origin`.
 **Email capture is now REAL (was placeholder):** Newsletter → Formspree `xqpkvyjg`, Quiz career-roadmap capture → Formspree `xzebljww`. Both live-tested `{"ok":true}`. Newsletter double-submit + false-success bugs fixed; quiz already clean (full 2-pass subagent review).

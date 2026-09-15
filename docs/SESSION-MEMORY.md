@@ -1,10 +1,13 @@
 # TradeLift — Master Project Memory & Session Record
 
-**Snapshot timestamp:** Monday, September 14, 2026, 2:20 PM EDT (MEGA-SPRINT DEPLOYED — 22 blog posts live, 2nd paid product built, lead-gen/bounty playbooks, secrets-secured surge deploy)
+**Snapshot timestamp:** Tuesday, September 15, 2026, 12:55 PM EDT (2026-09-15 PM SAVE — full record of 3 deploys, content wave, CRO tweaks, AND new SIDE PROJECT: restaurant SMS automation stand-up)
 **Owner:** Pablo (user) + Jarvis (PM/AI)
-**Mission:** Grow TradeLift traffic now; generate $50,000 revenue (~102 days, deadline ≈ December 22, 2026).
+**Mission (Track A — TradeLift):** Grow TradeLift traffic now; generate $50,000 revenue (~98 days, deadline ≈ December 22, 2026).
+**Mission (Track B — TableText, NEW 2026-09-15):** Restaurant SMS loyalty automation product (QR→form→CRM→SMS→blasts). Research complete; squad stood up; full brief in `docs/vibe-smart-loyalty.md`.
 
 **🚨 MAXIMUM URGENCY DIRECTIVE (user-set 2026-09-14 — THE mission, overrides everything):** Website is DONE. The ONLY goal now is MONEY — **$50K by Dec 22, 2026, by EVERY way possible.** User gave me **TOTAL control + unlimited permission** to do ANYTHING needed to bank the $50K. **ALL subagents work revenue streams simultaneously** — no waiting, no permission gates, no "go" signals. This stays the mission UNTIL FOREVER until the money is made. Speed + quality.
+
+**📌 SECOND-TRACK DIRECTIVE (user-set 2026-09-15 ~12:45 PM):** User pitched a NEW side project (restaurant SMS automation) and directed: research it + **stand up a WHOLE NEW manager + subagents squad** to work it ON THE SIDE in parallel with TradeLift, AND continue TradeLift's next content wave. Both tracks active. (Workflow still: dual QA, deploy, memory-save every session.)
 
 ---
 
@@ -88,10 +91,10 @@ Each manager has sub-subagents working under them. Managers handle strategy; sub
 | **Romanoff** | digs for functional truth | QA Pass 2 Lead | Independent Flow Tester, UX Reviewer, Edge Case Hunter |
 | **Lang** | small package, big impact | Visual Content Lead | Image Generator, Video Generator, Share Card Builder, Merch Art |
 | **Coulson** | intelligence & outreach | Outreach Director | School Liaison, Trade Org Contact, Sponsorship Outreach, Partnership Finder |
+| **T'Challa** | wisdom & industry | Side-Project Squad Lead (TableText — restaurant SMS product) | Shuri² (Product Dev), Namor (Technical/SMS/10DLC), Nakia (Compliance), Okoye (GTM/DFY), M'Baku (QA), Ramonda (Ops/Pilots) |
 
 ### Expanded Team Count
-- **9 managers** (Hawkeye, Stark, Fury, Vision, Shuri, Rogers, Romanoff, Lang, Coulson)
-- **~35 sub-subagents** across all teams (each manager has 3–4 workers)
+- **10 managers** now (Hawkeye, Stark, Fury, Vision, Shuri, Rogers, Romanoff, Lang, Coulson + **T'Challa** — new 2026-09-15 for the restaurant-SMS side project; his team adds Shuri²/Namor/Nakia/Okoye/M'Baku/Ramonda), ~41 sub-subagents across all teams
 - **Jarvis** = PM orchestrating all managers, making strategic decisions, deploying teams
 
 ### How It Works
@@ -540,3 +543,24 @@ Each manager has sub-subagents working under them. Managers handle strategy; sub
 - HEAD `9a2fee9` pushed to origin. Live = this commit. 28 posts, 39 sitemap URLs, 14 affiliate links added this wave (total Amazon tags sitewide well past 100).
 - **Pablo (account-gated):** Gumroad publish ($12 guides x2), Buttondown + email migrate, UTI/Lincoln partner pitches, real contact email, Formspree off disposable inbox.
 - **Jarvis next:** implement Romanoff growth proposals (mid-post CTAs, ASIN swaps); more affiliate posts; salary-parity reconciliation pass.
+
+---
+
+## 15. SESSION — 2026-09-15 (12:45–12:55 PM EDT) — SIDE PROJECT RESEARCH + NEW SQUAD STAND-UP (SAVE OF RECORD)
+
+**Prompt (verbatim):** "i have a idea i need you to research and get a whole new sub agents and agents manager asd subagents to work on this priject on the side its for a autmation type help for buisnesses and resturants. the process would be 1.customer scans qr code on the table lableded sign up for free apetizer 2.customer fills out a form on a landing page asking for personal information 3.contact created inside A CRM 4.confirmation sms is sent to a customer to claim thier app. the whole point of the automation is for buisnesses as this gets repeated for dozens of guests a day the resturant can build up a large contact list quite fast then we offer direct text marketing we wait until slow times like in a monday at 4pm and we send out mass text blasts for a limited buy one get one free special like these mass text blasts can be used for birthdays weekly specials holidays and promo offers events becauase resturants need the power of direct marketing. for our project were currently working on yes continue to the next wave"
+
+**Directive decoded:** (a) RESEARCH the restaurant-SMS idea; (b) stand up a WHOLE NEW manager + subagents squad to work it on the side; (c) continue TradeLift's next wave. Two parallel tracks from here on.
+
+### Track A — TradeLift (continuing)
+- Content wave 3 already deployed `9a2fee9` before this prompt (28 posts). CRO growth-tweaks `def214b` (helmets→tools.html, how-to-pay→tradeschools) deployed + pushed.
+- **NEXT WAVE queued:** more affiliate gear posts (Hawkeye), education-post mid-article quiz CTAs (Shuri), salary-parity reconciliation. **Pending — to execute next.**
+
+### Track B — NEW SIDE PROJECT: TableText (working name) — Restaurant SMS Loyalty Automation
+**RESEARCH COMPLETED (2 subagent research runs, live-verified sources). Full brief + squad = `docs/vibe-smart-loyalty.md`.** Headline findings:
+- **Market:** NO product is purpose-built for "QR at table → short form → SMS list → blasts" for independent restaurants. White space confirmed. Big-player weak spots: complex billing, contracts, DIY generalism, POS lock-in, list decay (53% opt-out on over-texting). Indie precedent: Textdrip $19.99–74.99/mo.
+- **Positioning:** $49/mo "Table Lead Kit" + $99/mo DFY tier (wedge) — "first SMS built for independent restaurants; one flat price; works with ANY POS."
+- **Compliance (CRITICAL):** 10DLC brand ($4.50) + campaign registration ($15 vetting + $1.50–30/mo); 11-element TCPA consent disclaimer template captured verbatim in brief; $500–$1,500/violation TCPA fines; STOP/HELP/8AM-9PM/DNC/consent-logging rules all captured.
+- **Stack:** MVP = Tally.so + Carrd + SimpleTexting (~$60–90/mo, no-code, compliant out of box); scale = Twilio+Supabase+Vercel (~$180–280/mo @10K msgs). Textlocal SHUT DOWN (do not use).
+- **Squad stood up (new manager + 6 subagents):** **T'Challa** (Side-Project Squad Lead / Product Builder) + **Shuri²** (Product Dev), **Namor** (Technical/SMS API 10DLC plumbing), **Nakia** (Compliance/TCPA), **Okoye** (GTM/DFY templates), **M'Baku** (QA/functional funnel), **Ramonda** (Ops/Pilot partnerships). Compliance pass (Nakia) is non-negotiable before any send. Runs in parallel with TradeLift lane under Jarvis.
+- **Open:** Pablo to pick product name, GTM model, MVP stack; find pilot restaurant(s); SimpleTexting/Twilio account under Pablo's email needed for scaffold.
