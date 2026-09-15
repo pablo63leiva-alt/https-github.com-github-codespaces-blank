@@ -305,3 +305,196 @@ action; this section is the spec, not the implementation.**
 3. **Add the quiz-result premium CTA (Vision)** — the highest-intent traffic on the site
    (post-quiz, post-email-capture) is already primed; the CTA card conversion is the
    single biggest traffic-to-sales lever. Ship CTA + blog related-cards the same day.
+
+---
+
+## 8. Product #2 — Land Your First Trade Apprenticeship (Gumroad Listing)
+
+**Built by:** Stark · **Status:** LANDING PAGE LIVE (not linked in nav/sitemap yet) —
+Gumroad listing pending account activation. Mirrors the §1 checklist for product #1.
+
+### 8a. The Product #2 Factbox
+
+| Field | Value |
+|---|---|
+| **Product** | Premium guide PDF |
+| **Title** | *Land Your First Trade Apprenticeship: The Step-by-Step Playbook (2026)* |
+| **File** | `assets/premium/first-apprenticeship.pdf` |
+| **Pages** | 14 (idempotent generator: `scripts/generate_first_apprenticeship.py`) |
+| **Size** | ~76 KB |
+| **Suggested price** | **$12** (planned — placeholder on page, swap when storefront is live) |
+| **Landing page** | `first-apprenticeship.html` (root, SEO-complete, not linked in nav/footer/sitemap) |
+| **Category** | Careers / Education / Skilled Trades |
+| **Audience** | 17–25 year-olds getting their first construction/trades apprenticeship |
+
+### 8b. Gumroad Listing — Land Your First Trade Apprenticeship
+
+**8b-1. Title**
+```
+Land Your First Trade Apprenticeship: The Step-by-Step Playbook (2026)
+```
+
+**8b-2. 3-Sentence Pitch** *(for the Gumroad "summary" line)*
+```
+Your first trade apprenticeship is a real job you can land without a resume-formula
+mystery. This playbook is the exact 5-step application system: research, background
+prep (OSHA 10, driver's license, tools checklist), the application kit, aptitude test
+prep, and the interview — with copy-paste resume and cover letter templates for union
+and non-union, plus 8 interview Q&As to rehearse. Built by TradeLift, the free career
+platform behind the 12-trade quiz.
+```
+
+**8b-3. 5 Benefit Bullets** *(short-form bullets, Gumroad-optimized)*
+```
+✅ The full 5-step application order — from zero experience to submitted applications
+✅ Copy-paste resume + 2 cover letter templates (union hall AND non-union shop)
+✅ IBEW / union-style aptitude test prep: sections, study plan, timed-practice tactics
+✅ 8 interview questions with answers to rehearse + follow-up email template
+✅ Apprentice pay by year for 6 trades — every figure traceable to tradelift.surge.sh
+```
+
+**8b-4. Recommended Price**
+| Launch phase | Price | Strategy |
+|---|---|---|
+| **Day 1–14 (launch)** | **$9** | Same launch-low anchor as product #1 — capture fast |
+| **Day 15–30 (standard)** | **$12** | Anchored price; matches product #1 list price |
+| **Day 31+ (steady-state)** | **$12–$15** | Test a permanent $15; bundle both guides at $19–$22 |
+
+**Recommended default: $12** — consistent with product #1 and the impulse-buy band
+($9–$19) established in §5a.
+
+**8b-5. Tags**
+```
+apprenticeship, trade apprenticeship, electrician apprenticeship, union apprenticeship,
+aptitude test, trade career, blue collar jobs, careers for teens, construction jobs,
+first job, vocational training
+```
+
+**8b-6. 50-Word TradeLift Blurb** *(reuse §1g with a product-2 twist)*
+```
+TradeLift helps the next generation of skilled tradespeople get hired. Our free tools —
+the 12-trade quiz, career roadmaps, and getting-started guides — have matched thousands
+of young workers with high-paying trades. This playbook is the application-phase
+deep-dive: the exact steps to land your first apprenticeship once you've picked a trade.
+```
+
+**8b-7. 6 Image Slots** *(Gumroad "You can upload up to 6 images of your product")*
+
+Same strategy as §1h — all six slots map to **existing** `img/og-*.png` files:
+
+| Slot | File (existing) | Context |
+|---|---|---|
+| 1 (cover / thumbnail) | `img/og-electrician.png` | Flagship trade — first apprenticeship story |
+| 2 | `img/og-welder.png` | Fastest cert-to-job path |
+| 3 | `img/og-plumber.png` | Union apprenticeship with a published pay scale |
+| 4 | `img/og-hvac-technician.png` | 36,700 openings, year-round demand |
+| 5 | `img/og-construction-manager.png` | The journey-level ceiling / career growth story |
+| 6 | `img/og-image.png` | Branded TradeLift fallback / listing banner |
+
+> Landing-page og:image already points to `og-electrician.png` — one visual system for
+> both the site and the storefront.
+
+**8b-8. 300-Word Product Description** *(paste-ready, follow product #1's format)*
+
+```
+LAND YOUR FIRST TRADE APPRENTICESHIP
+The Step-by-Step Playbook (2026)
+
+The trades have 750,000+ open positions — and employers are desperate for young,
+reliable workers. The problem isn't demand. It's that most applicants don't know how
+to apply: what to study, which certifications to get first, what the interview
+actually asks, and how to follow up.
+
+This 14-page PDF is the application-phase manual for 17–25 year-olds getting their
+first construction or trades apprenticeship.
+
+WHAT YOU GET INSIDE
+- Why apprenticeships beat college for this audience — the debt-free math, with real
+  site figures (750K+ open positions, 36,700 HVAC openings).
+- The 5-step application system: research → background prep (OSHA 10, driver's
+  license, tools-to-bring checklist) → application kit → aptitude test → interview.
+- Copy-paste one-page resume + two cover letter templates — one for union halls, one
+  for non-union shops.
+- IBEW / union-style aptitude test prep: the three test sections, a 4–6 week study
+  plan, and timed-practice tactics.
+- The interview: 8 questions with answers to rehearse, plus a follow-up email template.
+- Union vs. non-union comparison: pay structure, training quality, $0-cost vs fees,
+  and mobility — plus apprentice pay by year for 6 trades with BLS medians.
+- First-month checklist, 10 common mistakes that kill applications, and a resources
+  list to keep going.
+- A 12-trade salary reference where six trades without dedicated posts are honestly
+  marked "assumed — no dedicated post yet." No invented stats.
+
+WHO THIS IS FOR
+- 17–25 year-olds finishing high school or deciding what comes next.
+- Anyone with zero paid experience and a good attitude — the guide starts from scratch.
+- Career changers who want the fastest route to skills + income.
+
+Note: figures sourced from tradelift.surge.sh (BLS + industry data). Earnings vary by
+location, experience, and certifications. For educational purposes only.
+
+FREE ALTERNATIVE: the TradeLift quiz + career fit guide are free, forever —
+tradelift.surge.sh/quiz.html.
+```
+
+**8b-9. Landing-Page SEO Values (already live on `first-apprenticeship.html`)**
+
+| Field | Value |
+|---|---|
+| Title | `Land Your First Trade Apprenticeship - TradeLift` (48 chars — under the 60 limit) |
+| Meta description | 156 chars — under the 160 limit |
+| Canonical | `https://tradelift.surge.sh/first-apprenticeship.html` |
+| og:image | `https://tradelift.surge.sh/img/og-electrician.png` |
+| JSON-LD | WebPage + FAQPage (5 Q&As, verbatim with page) |
+| CTA | `href="#buy"` placeholder + `<!-- GUMROAD_LINK_PLACEHOLDER: swap when user's storefront is live -->` |
+| Price | `$12` shown as planned price with a clear "checkout link goes live later" note — no fabricated guarantee |
+
+**8b-10. Landing-page guardrails (Stark → Vision)**
+- Page is intentionally NOT linked in any nav, footer, or sitemap yet. When the Gumroad
+  listing is live, Vision can (a) swap the placeholder CTA/link, (b) decide whether to
+  surface it from the quiz premium-CTA pattern or blog related-cards.
+- The page's secondary CTA points to the FREE quiz (`quiz.html`) — never gate the free
+  funnel behind the paid product.
+
+### 8c. Gumroad Setup Checklist — Product #2
+
+Same flow as §3 (PABLO account prerequisite applies once):
+
+1. **Product — create.** Dashboard → **"New Product"** → **Digital**.
+   - Product name: *Land Your First Trade Apprenticeship: The Step-by-Step Playbook (2026)*
+   - Paste the §8b-2 pitch into the product summary line.
+2. **Upload.** Drag `assets/premium/first-apprenticeship.pdf`.
+   - Fixed price only; "Pay what you want" = OFF.
+3. **Price.** Set **$12.00** (or apply the §8b-4 launch strategy).
+4. **Cover & images.** Upload `img/og-electrician.png` as cover; add the six images from
+   §8b-7 in the gallery.
+5. **Description.** Paste the §8b-8 300-word description.
+6. **Checkout extras.** Discounts: reuse `LAUNCH25` (25% off first two weeks) if using
+   the §8b-4 launch strategy. CTA button: *"Take the free TradeLift quiz"* →
+   `https://tradelift.surge.sh/quiz.html`.
+7. **Publish.** Turn the Publish toggle ON → **Published now**. Copy the product URL
+   (Gumroad auto-generates the checkout link) and hand it to Stark/Vision to replace the
+   placeholder CTA on `first-apprenticeship.html`.
+8. **Post-purchase.** Thank-you message linking to the free quiz + the product #1 guide
+   as a cross-sell (both guides bundle naturally at $19–$22).
+
+**Publish copy (for PM/squads):**
+> "Product #2 is live at [URL] at $12. Landing page CTA placeholder swapped. Next:
+> bundle test and quiz-result premium CTA for both products."
+
+### 8d. File Map (what exists after this build)
+
+| File | Purpose |
+|---|---|
+| `scripts/generate_first_apprenticeship.py` | Idempotent PDF generator (14 pages, md5-identical on rerun) |
+| `assets/premium/first-apprenticeship.pdf` | Deliverable — product #2 PDF (~76 KB, 14 pages) |
+| `first-apprenticeship.html` | SEO-complete landing page (not linked in nav/footer/sitemap) |
+| `docs/storefront-launch-kit.md` | This doc — now covers both products |
+
+### 8e. Pricing / bundling notes (Stark's recommendation)
+
+- List both guides at **$12 each**, bundle at **$19** initially, $22 after 20 sales.
+- Product #2 is the *application-phase* companion to product #1's *90-day timeline* —
+  they are natural sequential upsells, not substitutes. Cross-sell in each thank-you
+  message and on both landing pages.
+- Discount floor stays **$9** per product (never below — see §5a).
