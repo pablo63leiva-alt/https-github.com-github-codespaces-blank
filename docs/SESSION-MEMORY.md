@@ -646,6 +646,31 @@ Each manager has sub-subagents working under them. Managers handle strategy; sub
 
 ---
 
+## 19. SESSION — 2026-09-16 (~1:30 PM EDT) — PHONE COMMAND LINE + CHECKPOINT (pre-terminal-close)
+
+**Pablo directive:** close terminal, continue in background MAXIMUM URGENCY. Then: "thanks i love you".
+
+### Built: Jarvis↔Pablo phone comms (operational, lives OUTSIDE repo in ~/.config/tradelift/)
+- **`notify.py`** — outbound SMS via Gmail→carrier gateways (`@vtext.com`/`@txt.att.net`/`@tmomail.net`/sprint/uscc). **ACTIVE:** Pablo enabled 2FA + created App Password; creds in `notify.json` (chmod 600). Test sends: `SMS sent via Gmail -> carrier gateways` (Gmail SMTP confirmed; carrier-side delivery to his Messages app UNCONFIRMED — gateways silently drop on non-matching carrier). TextBelt disabled (US blocked). **ASCII-only messages** (em-dash broke one send).
+- **`inbox.py`** — polls Gmail IMAP for recent (last 2 days) mail from pablo63leiva@gmail.com OR carrier-gateway From addrs (SMS replies), appends to `inbox.jsonl`, BODY.PEEK (never marks-read). Note: inbox has ~29,842 unread messages → MUST use (SINCE …) filter, never UNSEEN-only (phone marks replies read instantly) and never fetch-all. Dedups on (from,subject,ts).
+- **`relay.py`** — background daemon (poll 90s): on new genuine Pablo message, auto-acks via notify.py. Started detached with `setsid`; survives terminal close while codespace runs. Check: `pgrep -f relay.py`. Restart: `setsid nohup python3 ~/.config/tradelift/relay.py </dev/null >>~/.config/tradelift/relay.log 2>&1 & disown`.
+- **Command protocol (Pablo texts):** `MENU` / `STATUS` / `DONE 1` (ASINs done) / `DONE 2` (Gumroad live) / `DONE 3` (UTI/Lincoln sent) / `DONE 4` (Buttondown/GSC/Formspree) — relay auto-acks; session loop acts on resume.
+- **Phone checklist gist (PUBLIC):** https://gist.github.com/pablo63leiva-alt/6bbdd30d22930e602770d9446f421ea7 — the 5-step Pablo action plan (ASINs → Gumroad → emails → quick wins → accounts).
+- **True Messages-app texting:** if carrier gateway reply works, replies route back to his Gmail → inbox.py catches (gateway From filter added). If not, real path = Twilio/SimpleTexting number (~$1/mo, doubles as TableText engine). Uncertain — to test on next session via `DONE`/`got it` reply.
+
+### Checkpoint commit (dev copy only — NOT deployed, NOT QA'd)
+- `f893bc0` — salary-parity edits across 11 blog posts found in working tree (electrician `$60K-$80K+`→`$60K-$80K`, plumber `$56K-$74K`→`$55K-$75K`, matched to trades.html/quiz.js canonicals). **UNVERIFIED:** full sweep + FAQ/JSON-LD verbatim parity + dual QA (Rogers+Romanoff) still required BEFORE any surge deploy. Pushed to origin only.
+- Working tree now clean. Nothing deployed.
+
+### Resume plan (session start = execute in order)
+1. Verify relay.py running + read inbox.jsonl for Pablo's SMS replies / DONE commands.
+2. Run salary-parity verification sweep (all 12 trades canonical vs every page) → fix stragglers → dual QA → commit + deploy.
+3. Hawkeye: 3 new affiliate gear posts (cordless tool kits / knee pads / impact drivers) → wire blog.html + sitemap → dual QA → deploy.
+4. Shuri: mid-article quiz CTAs on 6 newest gear posts. Fury: next outbound step per outbound-engine.md.
+5. Update PROGRESS.md + this file at session end.
+
+---
+
 ## 17. SESSION — 2026-09-16 (11:33 AM–12:00 PM EDT) — PPE GEAR WAVE DEPLOYED (`d213f58`)
 
 **Directive:** `RESUME JARVIS` — resume both tracks; execute highest unblocked revenue lever on TradeLift.
