@@ -603,6 +603,64 @@ Each manager has sub-subagents working under them. Managers handle strategy; sub
 5. **DEPLOYED** (`bash scripts/deploy-surge.sh`) → live-verified: all 4 new posts 200, blog.html 200, home 200, **sitemap 43 locs live**.
 
 ### Open / next
-- **Jarvis:** more affiliate gear posts (electrician/plumber/HVAC gloves, tool brands); salary-parity reconciliation pass (plumber `$55K–$75K` vs `$56K–$74K`, electrician `$60K–$80K` vs `$60K–$80K+`); Shuri mid-article quiz CTAs.
+- **Jarvis:** more affiliate gear posts (electrician/plumber/HVAC gloves/tool brands); salary-parity reconciliation pass (plumber `$55K–$75K` vs `$56K–$74K`, electrician `$60K–$80K` vs `$60K–$80K+`); Shuri mid-article quiz CTAs.
 - **Pablo:** run ASIN swap (paste ASINs into `scripts/asins.csv`, then `python3 scripts/verify-asins.py --apply` — 10-min lookup in docs/asin-unblock.md); Gumroad publish; Buttondown + email migrate; UTI/Lincoln partner pitches; GSC submit; PA-API key; Formspree off disposable inbox.
+- **TableText (Track B):** MVP build doc complete — blocked on Pablo picking name/GTM/stack + creating SimpleTexting (or Twilio) account.
+
+---
+
+## 18. SESSION — 2026-09-16 (12:55 PM EDT) — OUTBOUND ENGINE + 2 MORE GEAR POSTS DEPLOYED (`48a3c3b`)
+
+**Directive:** `keep working i lleave` — maximum urgency, full autonomy, build marketing engine + ship revenue posts.
+
+### State found at resume
+- HEAD `d213f58` pushed to origin. TradeLift at 32 posts, 43 sitemap URLs. All PPE series hard hats, safety glasses, tool bags, work gloves live.
+
+### Work completed
+1. **OUTBOUND MARKETING ENGINE BUILT (Track A + new Track C):**
+   - **`docs/ads-kit.md`** — Full Meta/TikTok/Google paid ads playbook: 4 campaigns (Quiz Lead Magnet, Gear Affiliate, Trade School CPL, $12 Guide Retargeting) with copy, audiences, budgets ($10/day start), scale gates, pixel event schema, UTM convention.
+   - **`docs/tradesflicks-brand.md`** — Track C media brand: 30 video titles across 6 pillars (Salary, Myth-bust, Day-in-life, Money math, Gear, Identity), hook bank, cadence, TableText B2B angle.
+   - **`docs/tradesflicks-week1-scripts.md`** — 7 ready-to-shoot 15–45s vertical scripts (cheat code, salary reveal, day one, math, un-outsourceable, 3 tools, electrician vs welder) with captions/hashtags/CTA.
+   - **`docs/pixel-snippet.html`** — Meta Pixel base + Lead/CompleteRegistration/ViewContent event firepoints + TikTok Pixel equivalents, ready to paste once IDs exist.
+   - **`docs/uti-lincoln-outreach.md`** — Copy-paste cold emails to UTI `partner-with-us` and Lincoln Tech admissions for 30-day free CPL pilot.
+   - **`docs/outbound-engine.md`** — Cross-track distribution master plan: Paid Ads + Organic Social (TradesFlicks) + Outreach/PR running in parallel; 5 top revenue-lever actions needing ~30 min of Pablo; daily rhythm Jarvis can execute solo.
+
+2. **2 NEW PPE AFFILIATE POSTS BUILT + QA'd:**
+   - **Ear protection** (`blog/best-ear-protection-for-trades.html`): 11 Amazon links, 11 products (Peltor X5A NRR31, Howard Leight R-01526 NRR33, H10A hard-hat mount, WorkTunes Pro Bluetooth, ISOtunes BT 2.0, E-A-R EEP-100 corded, EarDial Featherlite, Laser Lite, E-A-Rsoft FX, Mpow Mute BT), 5 FAQ, comparison table, newsletter.
+   - **Work pants** (`blog/best-work-pants-for-construction.html`): 10 Amazon links, 9 products (Carhartt DD-Front, Dickies 874, Dickies Relaxed Duck, Wrangler Riggs Ripstop, Carhartt Force Stretch, Berne Double Knee, Carhartt FR Duck DD-Front, Duluth Fire Hose Flex, Wrangler Riggs FR), 5 FAQ, comparison table, newsletter.
+
+3. **DUAL QA (subagents):**
+   - **Romanoff Pass 2:** 3 MAJOR fixes applied — ear protection meta/hero "$12-200" → "$12-65" (highest product $65); work pants meta/hero "$30-90" → "$25-100" (actual range); Duluth Fire Hose Flex "24-oz" → "10-oz" (actual Duluth Flex spec); Berne Double Knee "13-oz" → "12-oz" (actual Berne spec). All product NRR/NFPA claims verified correct.
+   - **Rogers Pass 1:** PASS — 0 critical / 0 major. All structural checks green.
+
+4. **BLOG.HTML + SITEMAP WIRED:** 34 BlogPosting entries + 34 blog cards, sitemap 45 URLs idempotent.
+
+5. **COMMIT `48a3c3b`** → **pushed origin**.
+
+6. **DEPLOYED** (`bash scripts/deploy-surge.sh`) → live-verified: both new posts 200, blog.html 200, home 200, **sitemap 45 locs live**.
+
+### Open / next
+- **Jarvis:** more affiliate gear posts (cordless power tools, impact drivers, knee pads); salary-parity reconciliation; Shuri mid-article quiz CTAs; TradesFlicks week-1 production once accounts exist.
+- **Pablo:** ASIN swap (`scripts/asins.csv` + `verify-asins.py`); Gumroad publish; Buttondown + email migrate; create TikTok/IG/YT accounts @tradesflicks; Meta + TikTok Ads accounts; UTI/Lincoln pilot outreach from leads sheet; GSC submit; PA-API key; Formspree off disposable inbox.
+- **TableText (Track B):** MVP build doc complete — blocked on Pablo picking name/GTM/stack + creating SimpleTexting (or Twilio) account.
+
+---
+
+## 17. SESSION — 2026-09-16 (11:33 AM–12:00 PM EDT) — PPE GEAR WAVE DEPLOYED (`d213f58`)
+
+**Directive:** `RESUME JARVIS` — resume both tracks; execute highest unblocked revenue lever on TradeLift.
+
+### State found at resume
+- HEAD `43b2d6a` pushed to origin. Working tree had 4 NEW untracked affiliate posts (hard hats, safety glasses, tool bags, work gloves) + wiring into blog.html (128 lines) + sitemap (43 URLs) + Fury/Stark/T'Challa docs (asin-unblock, haro-reddit-kit, state-of-trade-careers, tabletext-mvp-build, verify-asins.py, asins.csv) + outreach-strategy honest-copy fixes.
+
+### Work completed
+1. **Baseline verify:** all 4 posts HTML clean, 0 dup IDs (6 ids each), 49 `tag=tradelift-20` Amazon links, sitemap 43 idempotent, JS `node --check` OK, CSS braces 212/212 · 66/66 · 48/48.
+2. **Romanoff Pass 2 (subagent):** 2 CRITICAL (tool-bags title/metadata mismatch — `<title>`/og/twitter/JSON-LD said "Best Tool Bag for Electricians" while H1/blog card said "Best Tool Bags for Apprentices" → unified all to "Best Tool Bags for Apprentices"; tool-bags missing from sitemap → regenerated at 43), 3 MAJOR (missing newsletter sections on tool-bags + safety-glasses → added matching hard-hats/gloves pattern with honeypot; blog.html `<article>` indent; all links still `/s?k=` search → ASIN kit documents the swap, blocked on Pablo), 3 MINOR (generic og:image reuse — deferred; hard-hats 17 links at range high — OK; BlogPosting extra schema fields).
+3. **Rogers Pass 1 (subagent):** PASS — 0 critical / 0 major. 2 minors fixed: gloves `<title>` had "(2026)" but H1 didn't → dropped "(2026)" sitewide on that post; gloves salary claim `$18-$25/hr` / `$50K-$80K` → canonical `$15-$25/hr` / `$45K-$80K` (carpenter/mason/ironworker bands). INFO: wrapper classes unstyled pre-existing pattern; footer social `#` placeholders site convention; FAQ verbatim 5/5 all posts; BlogPosting 32/32 with description.
+4. **COMMIT `d213f58`** (feat: 4 PPE affiliate gear posts — hard hats, safety glasses, tool bags, work gloves; 49 Amazon links; blog.html 32 cards/BlogPosting; sitemap 43; QA fixes; Fury PR/ASIN/state-of-trade docs; T'Challa TableText MVP build doc) → **pushed origin**.
+5. **DEPLOYED** (`bash scripts/deploy-surge.sh`) → live-verified: all 4 new posts 200, blog.html 200, home 200, **sitemap 43 locs live**.
+
+### Open / next
+- **Jarvis:** more affiliate gear posts (cordless power tools, impact drivers, knee pads, welding gloves); salary-parity reconciliation pass (plumber `$55K–$75K` vs `$56K–$74K`, electrician `$60K–$80K` vs `$60K–$80K+`); Shuri mid-article quiz CTAs; TradesFlicks week-1 production once accounts exist.
+- **Pablo:** ASIN swap (`scripts/asins.csv` + `verify-asins.py`); Gumroad publish; Buttondown + email migrate; create TikTok/IG/YT accounts @tradesflicks; Meta + TikTok Ads accounts; UTI/Lincoln pilot outreach from leads sheet; GSC submit; PA-API key; Formspree off disposable inbox.
 - **TableText (Track B):** MVP build doc complete — blocked on Pablo picking name/GTM/stack + creating SimpleTexting (or Twilio) account.

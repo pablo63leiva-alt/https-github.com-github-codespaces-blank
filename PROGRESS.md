@@ -1,6 +1,6 @@
 # TradeLift — Progress Tracker
 
-**Last updated:** Wednesday, September 16, 2026 (11:40 AM EDT session) — DEPLOYED: 4 new PPE affiliate gear posts (32 posts total, 43 sitemap, live) + Fury PR/ASIN docs committed.
+**Last updated:** Wednesday, September 16, 2026 (12:55 PM EDT session) — DEPLOYED: 2 new PPE affiliate gear posts (ear protection + work pants; 34 posts total, 45 sitemap, live) + full outbound marketing engine built + Track C TradesFlicks media brand launched.
 
 # TWO TRACKS (as of 2026-09-16)
 
@@ -14,12 +14,13 @@
 
 > Deployed today (09-16 11:40 AM): `d213f58` — 4 PPE affiliate gear posts (hard hats, safety glasses, tool bags, work gloves; 49 `tag=tradelift-20` links), blog.html 32 cards/BlogPosting, sitemap 43, QA fixes (tool-bag title parity, gloves salary bands, blog.html indent), newsletter wire-ins on tool-bags + safety-glasses, Fury PR docs (HARO/Reddit kit, state-of-trade draft, ASIN unblock kit + verify script). Live-verified 200 on all new posts + sitemap 43.
 
-### Done & Shipped — 2026-09-16 11:40 AM SESSION (committed `d213f58`, deployed, origin synced)
-- [x] **Hawkeye: 4 NEW PPE affiliate posts (32 total)** — `blog/best-hard-hats-for-trade-workers.html` (15 links), `blog/best-safety-glasses-for-trades.html` (10), `blog/best-tool-bags-for-apprentices.html` (12), `blog/best-work-gloves-for-construction.html` (12). blog.html 32 cards + 32 BlogPosting; sitemap → **43 URLs** (idempotent ×2).
-- [x] **Dual QA:** Rogers Pass 1 — PASS (0 crit/major; minors: gloves "(2026)" in title-not-H1 → fixed; gloves salary band $18-25/$50-80K → canonical $15-25/$45-80K). Romanoff Pass 2 — 2 CRITICAL fixed (tool-bags title/metadata mismatch → unified "Best Tool Bags for Apprentices"; tool-bags missing from sitemap → regenerated), 3 MAJOR (tool-bags + safety-glasses missing newsletter sections → added matching hard-hats/gloves pattern; blog.html indent; /s?k= vs /dp/ → documented via ASIN unblock kit, blocked on Pablo).
-- [x] **Other work in commit:** `docs/haro-reddit-kit.md` (Fury), `docs/state-of-trade-careers-2026.md` (Fury draft), `docs/asin-unblock.md` + `scripts/verify-asins.py` + `scripts/asins.csv` (Fury/Stark ASIN kit), `docs/tabletext-mvp-build.md` (T'Challa). outreach-strategy.md copy honesty fixes (5,000+ claims → "thousands").
-- [ ] **NEXT (Jarvis):** more affiliate gear posts (electrician/plumber/HVAC gloves/tool brands), salary-parity reconciliation pass (plumber $55-75K vs $56-74K, electrician $60-80K vs $60-80K+), mid-article quiz CTAs (Shuri).
-- [ ] **NEXT (Pablo):** run `scripts/verify-asins.py` after pasting ASINs into `scripts/asins.csv` (10-min lookup per docs/asin-unblock.md); Gumroad publish; Buttondown; UTI/Lincoln pitches; GSC submit; PA-API key.
+### Done & Shipped — 2026-09-16 12:55 PM SESSION (committed `48a3c3b`, deployed, origin synced)
+- [x] **Hawkeye: 2 NEW PPE affiliate posts (34 total)** — `blog/best-ear-protection-for-trades.html` (11 links), `blog/best-work-pants-for-construction.html` (10 links). blog.html 34 cards + 34 BlogPosting; sitemap → **45 URLs** (idempotent ×2).
+- [x] **Dual QA:** Rogers Pass 1 — PASS (0 crit/major). Romanoff Pass 2 — 3 MAJOR fixed (ear protection meta "$12-200" → "$12-65"; work pants meta "$30-90" → "$25-100"; Duluth "24-oz" → "10-oz"; Berne "13-oz" → "12-oz").
+- [x] **Fury/Jarvis: OUTBOUND ENGINE BUILT** — `docs/ads-kit.md` (Meta/TikTok/Google copy + audiences + budgets + scale gates), `docs/tradesflicks-brand.md` + `docs/tradesflicks-week1-scripts.md` (Track C media brand: 30 vid titles, 7 ready-to-shoot scripts, hooks, cadence), `docs/pixel-snippet.html` (Meta/TikTok base + event firepoints), `docs/uti-lincoln-outreach.md` (cold email to UTI + Lincoln Tech), `docs/outbound-engine.md` (cross-track distribution master plan).
+- [x] **LIVE-VERIFIED:** all 2 new posts 200, blog.html 200, home 200, sitemap 45 locs live.
+- [ ] **NEXT (Jarvis):** more affiliate gear posts (cordless power tools, impact drivers, knee pads); salary-parity reconciliation; Shuri mid-article quiz CTAs; start TradesFlicks week-1 production once Pablo creates accounts.
+- [ ] **NEXT (Pablo):** ASIN swap (`scripts/asins.csv` + `verify-asins.py`); Gumroad publish; Buttondown + email migrate; create TikTok/IG/YT accounts @tradesflicks; Meta + TikTok Ads accounts; UTI/Lincoln pilot outreach from leads sheet; GSC submit; PA-API key; Formspree off disposable inbox.
 
 ### Done & Shipped — 2026-09-15 PM SESSION #2 (committed `9a2fee9`, deployed, origin synced)
 - [x] **Hawkeye: 4 NEW posts (28 total)** — `blog/best-work-boots-for-apprentices.html` + `blog/best-welding-helmets-for-beginners.html` (gear affiliates, 7 Amazon links each, `tag=tradelift-20`), `blog/how-to-pay-for-trade-school.html` + `blog/what-to-expect-first-year-trade-school.html` (trade-school education guides, 0 affiliates). blog.html 28 cards + 28 BlogPosting; sitemap → **39 URLs** (idempotent ×2).
