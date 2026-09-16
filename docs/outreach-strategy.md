@@ -90,7 +90,7 @@ Key points I'd cover:
 - [Point 2 with practical value]
 - [Point 3 with unique insight]
 
-I have access to original data from our career quiz (5,000+ responses) and 
+I have access to original data from our career quiz (thousands of career-quiz responses) and 
 salary research across 12 trades that would make this piece data-driven 
 and unique to your audience.
 
@@ -207,7 +207,7 @@ These are high-value pages designed to attract links naturally:
 **Response strategy:**
 - Lead with data: "Our research across 12 trades shows..."
 - Be quotable: Give reporters a clean soundbite they can paste
-- Include credentials: "TradeLift, a free career resource for 5,000+ young adults"
+- Include credentials: "TradeLift, a free career resource for thousands of young adults"
 - Target 50-word responses for speed, expand if they follow up
 
 **Target publications:**
@@ -273,7 +273,7 @@ Submit TradeLift to these free directories:
 
 **Outline:**
 1. Executive Summary — 3 key takeaways
-2. Methodology — Sources: BLS OES, OSHA data, NCES, TradeLift quiz data (5,000+ responses)
+2. Methodology — Sources: BLS OES, OSHA data, NCES, TradeLift quiz data (thousands of career-quiz responses)
 3. Salary Trends by Trade — Table + chart for all 12 trades
 4. Geographic Hotspots — Top 10 states for each trade
 5. The Debt Comparison — Trade school vs 4-year degree: total cost, time to ROI

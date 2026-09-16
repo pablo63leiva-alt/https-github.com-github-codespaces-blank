@@ -85,6 +85,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://tradelift.surge.sh/blog/best-hard-hats-for-trade-workers.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://tradelift.surge.sh/blog/best-hvac-tools-for-beginners.html</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -99,6 +105,18 @@
   <url>
     <loc>https://tradelift.surge.sh/blog/best-plumbing-tools-for-apprentices.html</loc>
     <lastmod>2026-09-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://tradelift.surge.sh/blog/best-safety-glasses-for-trades.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://tradelift.surge.sh/blog/best-tool-bags-for-apprentices.html</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -135,6 +153,12 @@
   <url>
     <loc>https://tradelift.surge.sh/blog/best-work-boots-for-apprentices.html</loc>
     <lastmod>2026-09-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://tradelift.surge.sh/blog/best-work-gloves-for-construction.html</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
