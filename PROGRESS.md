@@ -1,6 +1,6 @@
 # TradeLift — Progress Tracker
 
-**Last updated:** Wednesday, September 16, 2026 (RESUME session) — 12:55 SAVE OF RECORD: TradeLift (28 posts, 39 sitemap, deployed) + NEW side project RESEARCHED & SQUAD STOOD UP.
+**Last updated:** Wednesday, September 16, 2026 (11:40 AM EDT session) — DEPLOYED: 4 new PPE affiliate gear posts (32 posts total, 43 sitemap, live) + Fury PR/ASIN docs committed.
 
 # TWO TRACKS (as of 2026-09-16)
 
@@ -10,9 +10,16 @@
 - [ ] **NEXT (Pablo):** pick name/GTM/stack + create SimpleTexting or Twilio account → then T'Challa/Shuri² scaffolds MVP. Ramonda pilot outreach ready to fire from leads sheet.
 
 ## Track A — TradeLift (@ tradelift.surge.sh) — PRIMARY MONEY ENGINE
-## Status: 🟢 PRODUCTION LIVE — 28 blog posts, 2 new pages, 39-URL sitemap, email capture live
+## Status: 🟢 PRODUCTION LIVE — 32 blog posts, 43-URL sitemap, email capture live
 
-> Deployed today: `e18fda0` (first-apprenticeship landing + interlinking), `9a2fee9` (4 new posts), `def214b` (CRO growth-tweaks). All pushed to origin. Next wave (affiliate gear posts + mid-article CTAs + salary-parity) QUEUED.
+> Deployed today (09-16 11:40 AM): `d213f58` — 4 PPE affiliate gear posts (hard hats, safety glasses, tool bags, work gloves; 49 `tag=tradelift-20` links), blog.html 32 cards/BlogPosting, sitemap 43, QA fixes (tool-bag title parity, gloves salary bands, blog.html indent), newsletter wire-ins on tool-bags + safety-glasses, Fury PR docs (HARO/Reddit kit, state-of-trade draft, ASIN unblock kit + verify script). Live-verified 200 on all new posts + sitemap 43.
+
+### Done & Shipped — 2026-09-16 11:40 AM SESSION (committed `d213f58`, deployed, origin synced)
+- [x] **Hawkeye: 4 NEW PPE affiliate posts (32 total)** — `blog/best-hard-hats-for-trade-workers.html` (15 links), `blog/best-safety-glasses-for-trades.html` (10), `blog/best-tool-bags-for-apprentices.html` (12), `blog/best-work-gloves-for-construction.html` (12). blog.html 32 cards + 32 BlogPosting; sitemap → **43 URLs** (idempotent ×2).
+- [x] **Dual QA:** Rogers Pass 1 — PASS (0 crit/major; minors: gloves "(2026)" in title-not-H1 → fixed; gloves salary band $18-25/$50-80K → canonical $15-25/$45-80K). Romanoff Pass 2 — 2 CRITICAL fixed (tool-bags title/metadata mismatch → unified "Best Tool Bags for Apprentices"; tool-bags missing from sitemap → regenerated), 3 MAJOR (tool-bags + safety-glasses missing newsletter sections → added matching hard-hats/gloves pattern; blog.html indent; /s?k= vs /dp/ → documented via ASIN unblock kit, blocked on Pablo).
+- [x] **Other work in commit:** `docs/haro-reddit-kit.md` (Fury), `docs/state-of-trade-careers-2026.md` (Fury draft), `docs/asin-unblock.md` + `scripts/verify-asins.py` + `scripts/asins.csv` (Fury/Stark ASIN kit), `docs/tabletext-mvp-build.md` (T'Challa). outreach-strategy.md copy honesty fixes (5,000+ claims → "thousands").
+- [ ] **NEXT (Jarvis):** more affiliate gear posts (electrician/plumber/HVAC gloves/tool brands), salary-parity reconciliation pass (plumber $55-75K vs $56-74K, electrician $60-80K vs $60-80K+), mid-article quiz CTAs (Shuri).
+- [ ] **NEXT (Pablo):** run `scripts/verify-asins.py` after pasting ASINs into `scripts/asins.csv` (10-min lookup per docs/asin-unblock.md); Gumroad publish; Buttondown; UTI/Lincoln pitches; GSC submit; PA-API key.
 
 ### Done & Shipped — 2026-09-15 PM SESSION #2 (committed `9a2fee9`, deployed, origin synced)
 - [x] **Hawkeye: 4 NEW posts (28 total)** — `blog/best-work-boots-for-apprentices.html` + `blog/best-welding-helmets-for-beginners.html` (gear affiliates, 7 Amazon links each, `tag=tradelift-20`), `blog/how-to-pay-for-trade-school.html` + `blog/what-to-expect-first-year-trade-school.html` (trade-school education guides, 0 affiliates). blog.html 28 cards + 28 BlogPosting; sitemap → **39 URLs** (idempotent ×2).

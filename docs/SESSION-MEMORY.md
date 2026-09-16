@@ -585,3 +585,24 @@ Each manager has sub-subagents working under them. Managers handle strategy; sub
 ### State at save
 - Track B deliverables committed to `origin` (docs only — no production deploy needed). 4 new files + 2 memory files.
 - **Next session priority:** build next affiliate gear post(s) (highest unblocked revenue lever), then Shuri CRO (mid-post CTAs); Pablo to unblock ASIN swap + Gumroad + GSC.
+
+---
+
+## 17. SESSION — 2026-09-16 (11:33 AM–12:00 PM EDT) — PPE GEAR WAVE DEPLOYED (`d213f58`)
+
+**Directive:** `RESUME JARVIS` — resume both tracks; execute highest unblocked revenue lever on TradeLift.
+
+### State found at resume
+- HEAD `43b2d6a` pushed to origin. Working tree had 4 NEW untracked affiliate posts (hard hats, safety glasses, tool bags, work gloves) + wiring into blog.html (128 lines) + sitemap (43 URLs) + Fury/Stark/T'Challa docs (asin-unblock, haro-reddit-kit, state-of-trade-careers, tabletext-mvp-build, verify-asins.py, asins.csv) + outreach-strategy honest-copy fixes.
+
+### Work completed
+1. **Baseline verify:** all 4 posts HTML clean, 0 dup IDs (6 ids each), 49 `tag=tradelift-20` Amazon links, sitemap 43 idempotent, JS `node --check` OK, CSS braces 212/212 · 66/66 · 48/48.
+2. **Romanoff Pass 2 (subagent):** 2 CRITICAL (tool-bags title/metadata mismatch — `<title>`/og/twitter/JSON-LD said "Best Tool Bag for Electricians" while H1/blog card said "Best Tool Bags for Apprentices" → unified all to "Best Tool Bags for Apprentices"; tool-bags missing from sitemap → regenerated at 43), 3 MAJOR (missing newsletter sections on tool-bags + safety-glasses → added matching hard-hats/gloves pattern with honeypot; blog.html `<article>` indent; all links still `/s?k=` search → ASIN kit documents the swap, blocked on Pablo), 3 MINOR (generic og:image reuse — deferred; hard-hats 17 links at range high — OK; BlogPosting extra schema fields).
+3. **Rogers Pass 1 (subagent):** PASS — 0 critical / 0 major. 2 minors fixed: gloves `<title>` had "(2026)" but H1 didn't → dropped "(2026)" sitewide on that post; gloves salary claim `$18-$25/hr` / `$50K-$80K` → canonical `$15-$25/hr` / `$45K-$80K` (carpenter/mason/ironworker bands). INFO: wrapper classes unstyled pre-existing pattern; footer social `#` placeholders site convention; FAQ verbatim 5/5 all posts; BlogPosting 32/32 with description.
+4. **COMMIT `d213f58`** (feat: 4 PPE affiliate gear posts — hard hats, safety glasses, tool bags, work gloves; 49 Amazon links; blog.html 32 cards/BlogPosting; sitemap 43; QA fixes; Fury PR/ASIN/state-of-trade docs; T'Challa TableText MVP build doc) → **pushed origin**.
+5. **DEPLOYED** (`bash scripts/deploy-surge.sh`) → live-verified: all 4 new posts 200, blog.html 200, home 200, **sitemap 43 locs live**.
+
+### Open / next
+- **Jarvis:** more affiliate gear posts (electrician/plumber/HVAC gloves, tool brands); salary-parity reconciliation pass (plumber `$55K–$75K` vs `$56K–$74K`, electrician `$60K–$80K` vs `$60K–$80K+`); Shuri mid-article quiz CTAs.
+- **Pablo:** run ASIN swap (paste ASINs into `scripts/asins.csv`, then `python3 scripts/verify-asins.py --apply` — 10-min lookup in docs/asin-unblock.md); Gumroad publish; Buttondown + email migrate; UTI/Lincoln partner pitches; GSC submit; PA-API key; Formspree off disposable inbox.
+- **TableText (Track B):** MVP build doc complete — blocked on Pablo picking name/GTM/stack + creating SimpleTexting (or Twilio) account.
