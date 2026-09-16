@@ -564,3 +564,24 @@ Each manager has sub-subagents working under them. Managers handle strategy; sub
 - **Stack:** MVP = Tally.so + Carrd + SimpleTexting (~$60–90/mo, no-code, compliant out of box); scale = Twilio+Supabase+Vercel (~$180–280/mo @10K msgs). Textlocal SHUT DOWN (do not use).
 - **Squad stood up (new manager + 6 subagents):** **T'Challa** (Side-Project Squad Lead / Product Builder) + **Shuri²** (Product Dev), **Namor** (Technical/SMS API 10DLC plumbing), **Nakia** (Compliance/TCPA), **Okoye** (GTM/DFY templates), **M'Baku** (QA/functional funnel), **Ramonda** (Ops/Pilot partnerships). Compliance pass (Nakia) is non-negotiable before any send. Runs in parallel with TradeLift lane under Jarvis.
 - **Open:** Pablo to pick product name, GTM model, MVP stack; find pilot restaurant(s); SimpleTexting/Twilio account under Pablo's email needed for scaffold.
+
+---
+
+## 16. SESSION — 2026-09-16 (RESUME — TRACK B DELIVERABLES BUILT, `/dp/` CONFIRMED BLOCKED ON PABLO)
+
+**Directive:** resume, state goals, continue with maximum urgency on both tracks.
+
+### Track B — TableText: non-blocked NEXT actions EXECUTED (3 parallel subagents + 1 QA pass)
+- **[Nakia] `docs/tabletext-consent-and-privacy.md`** — paste-ready 11-element consent line (placeholder + filled demo), privacy blurb, full privacy-policy skeleton, consent-logging spec, STOP/HELP automation checklist, sending guardrails, 12-item pre-launch checklist, TCPA risk section.
+- **[Okoye] `docs/tabletext-launch-kit.md`** — 3 QR-tent variants, Carrd landing wireframe + copy (mobile-first), 142-char confirmation SMS, 4 blast templates (welcome/Monday-BOGO/birthday/holiday) all <160 chars + send/reminder schedule, 12-month campaign calendar, $49/$99 sales page + 10 positioning lines, 5 competitor one-liners, 10-item launch checklist.
+- **[Ramonda] `docs/tabletext-pilot-outreach.md` + `docs/tabletext-pilot-leads.csv` + `docs/pilot-feedback.md`** — 20 prospect lead sheet, 3 email templates (pilot/7-day/14-day), quiet-hours call + voicemail + walk-in scripts, pilot agreement one-pager, operator-playbook outline, week-2/4 feedback loop.
+- **[QA pass] 3 MUST FIX + 4 SHOULD + 3 NIT all resolved:** brand prefix added to consent line; cadence unified sitewide (hard cap 2 texts/wk TOTAL, 1 promo + 1 lifestyle); 10PM→9PM quiet-hours window (FL/OK 8–8); print-vs-ship tier split clarified; Monday-blast timing aligned to Thursday+Saturday sends; "about/never"→"up to 2 texts a week" consumer copy; `84% consumers` (not diners); signature placeholder fixed.
+
+### Track A — TradeLift
+- **Verified live:** tradelift.surge.sh 200 / blog 200 / sitemap 39 OK. origin clean at `4e099b1`.
+- **`/s?k=`→`/dp/` ASIN conversion INVESTIGATED — CONFIRMED BLOCKED:** 175 unique `s?k=` search URLs (361 total, incl. tools.html 72 + 8 gear posts). Direct Amazon fetch = HTTP 503 (bot-blocked). **Converting without real ASINs = fabricated-ASIN violation (Romanoff QA guardrail).** Required: Pablo's Amazon PA-API 5.0 key (or human ASIN verification) → then mechanical swap.
+- **Unblocked next wave remains:** more affiliate gear posts (Hawkeye), mid-article quiz CTAs (Shuri), salary-parity pass (Shuri). Pablo-gated: Gumroad $12 guide, Buttondown/email migrate, UTI/Lincoln pitches, GSC submit, PA-API key.
+
+### State at save
+- Track B deliverables committed to `origin` (docs only — no production deploy needed). 4 new files + 2 memory files.
+- **Next session priority:** build next affiliate gear post(s) (highest unblocked revenue lever), then Shuri CRO (mid-post CTAs); Pablo to unblock ASIN swap + Gumroad + GSC.

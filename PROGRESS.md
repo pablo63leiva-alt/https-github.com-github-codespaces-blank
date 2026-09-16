@@ -1,8 +1,13 @@
 # TradeLift — Progress Tracker
 
-**Last updated:** Tuesday, September 15, 2026 (12:55 PM EDT) — 12:55 SAVE OF RECORD: TradeLift (28 posts, 39 sitemap, deployed) + NEW side project RESEARCHED & SQUAD STOOD UP.
+**Last updated:** Wednesday, September 16, 2026 (RESUME session) — 12:55 SAVE OF RECORD: TradeLift (28 posts, 39 sitemap, deployed) + NEW side project RESEARCHED & SQUAD STOOD UP.
 
-# TWO TRACKS (as of 2026-09-15)
+# TWO TRACKS (as of 2026-09-16)
+
+## Track B — TableText (working name) — RESTAURANT SMS LOYALTY AUTOMATION
+## Status: 🟡 MVP-KIT BUILT (consent/launch/pilot docs) — waiting on Pablo account + name
+> **2026-09-16 RESUME session:** 3 parallel deliverables landed + QA'd. Nakia → `docs/tabletext-consent-and-privacy.md` (11-element consent line, privacy policy skeleton, logging spec, 12-item pre-launch checklist). Okoye → `docs/tabletext-launch-kit.md` (3 QR-tent variants, landing wireframe+copy, 4 blast templates <160ch, 12-mo calendar, $49/$99 sales page). Ramonda → `docs/tabletext-pilot-outreach.md` + `docs/tabletext-pilot-leads.csv` + `docs/pilot-feedback.md` (20-lead sheet, email/call/walk-in scripts, pilot agreement, feedback loop). QA: 3 MUST FIX + 7 minor all fixed (consent brand prefix, 2-text cap unified, 9PM quiet-window, print-vs-ship, Monday timing, consumer copy).
+- [ ] **NEXT (Pablo):** pick name/GTM/stack + create SimpleTexting or Twilio account → then T'Challa/Shuri² scaffolds MVP. Ramonda pilot outreach ready to fire from leads sheet.
 
 ## Track A — TradeLift (@ tradelift.surge.sh) — PRIMARY MONEY ENGINE
 ## Status: 🟢 PRODUCTION LIVE — 28 blog posts, 2 new pages, 39-URL sitemap, email capture live
