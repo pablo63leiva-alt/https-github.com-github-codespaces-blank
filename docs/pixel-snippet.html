@@ -1,0 +1,78 @@
+<!-- TRADEFLIFT AD PIXEL SNIPPET — paste into <head> of index.html (or add before </body> for page-load performance).
+Swap YOUR_PIXEL_ID_HERE with your real Meta Pixel ID after creating it in Business Manager.
+
+This is the BASE code. Event snippets fire on quiz completion / email capture (see inline comments). -->
+<script>
+  /* ─── Meta Pixel Base ─── */
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', 'YOUR_META_PIXEL_ID_HERE');  // ← swap in real ID
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=YOUR_META_PIXEL_ID_HERE&ev=PageView&noscript=1"/></noscript>
+<!-- ─── End Meta Pixel Base ─── -->
+
+<!--
+  ─── Event firepoints (paste AFTER the base pixel above) ───
+  Wire these into the inline quiz.js / main.js success paths where noted.
+  Each block is a COPY-PASTE ready snippet; uncomment and paste into the right handler.
+-->
+
+<!--
+  ── Event: Quiz Completed (fire in js/quiz.js, after results render) ──
+  Paste this inside the showResults() success path, after the results section is revealed:
+-->
+<!--
+  <script>
+    fbq('track', 'Lead', {
+      content_name: quizResults.winner.name,
+      content_category: 'quiz_completed',
+      value: 0,
+      currency: 'USD'
+    });
+    // TikTok Pixel equivalent (add to tiktok pixel base, same spot):
+    // ttq.track('SubmitForm', { content_name: quizResults.winner.name });
+  </script>
+-->
+
+<!--
+  ── Event: Email Captured (fire in js/quiz.js + js/main.js, after successful POST or mailto fallback) ──
+  Paste this inside the .then(res => ...) success block in handleEmailSubmit / newsletter handler:
+-->
+<!--
+  <script>
+    fbq('track', 'CompleteRegistration', {
+      content_name: 'email_captured',
+      status: 'completed'
+    });
+  </script>
+-->
+
+<!--
+  ── Event: Guide Downloaded (fire after the guide download link is shown / clicked) ──
+  Paste in quiz.js showCareerGuideDownload() or in the guide link click handler:
+-->
+<!--
+  <script>
+    fbq('track', 'ViewContent', {
+      content_name: 'career_fit_guide',
+      content_type: 'product',
+      value: 0,
+      currency: 'USD'
+    });
+  </script>
+-->
+
+<!--
+  ── Event: Gear CTA Click (fire on affiliate link click in any blog post) ──
+  Add to each Amazon link in the gear blog posts as an onclick handler:
+  onclick="fbq('track','ViewContent',{content_name:'[PRODUCT_NAME]',content_type:'product',value:0,currency:'USD'});"
+  Example:
+  <a href="https://www.amazon.com/dp/B0XXX?tag=tradelift-20"
+     onclick="fbq('track','ViewContent',{content_name:'MSA_V-Gard_Hard_Hat',content_type:'product',value:29,currency:'USD'});"
+     target="_blank" rel="noopener noreferrer">...</a>
+-->
